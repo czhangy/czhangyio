@@ -8,8 +8,9 @@
         "start": "next start",
         "lint": "next lint",
         "db": "npx prisma db push --schema=./src/prisma/schema.prisma && npx prisma studio --schema=./src/prisma/schema.prisma",
-        "test": "jest --coverage",
-        "test:watch": "jest --watch"
+        "test": "jest --coverage  --passWithNoTests",
+        "test:watch": "jest --watch",
+        "prepare": "husky install"
     },
     "dependencies": {
         "@prisma/client": "^4.0.0",
@@ -29,6 +30,7 @@
         "jest": "^28.1.2",
         "jest-environment-jsdom": "^28.1.2",
         "prisma": "^4.0.0",
-        "typescript": "4.7.4"
+        "typescript": "4.7.4",
+        "husky": "^8.0.0"
     }
 }
