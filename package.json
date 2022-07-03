@@ -7,8 +7,9 @@
         "build": "next build",
         "start": "next start",
         "lint": "next lint",
-        "db": "npx prisma db push && npx prisma studio",
-        "test": "jest --coverage"
+        "db": "npx prisma db push --schema=./src/prisma/schema.prisma && npx prisma studio --schema=./src/prisma/schema.prisma",
+        "test": "jest --coverage",
+        "test:watch": "jest --watch"
     },
     "dependencies": {
         "@prisma/client": "^4.0.0",

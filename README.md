@@ -167,7 +167,7 @@ npm run dev
 
 ## Roadmap
 
--   [ ] Set up Prisma + PostgreSQL
+-   [x] Set up Prisma + PostgreSQL
 
 -   [ ] Build nav
 
