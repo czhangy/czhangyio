@@ -1,0 +1,16 @@
+@use "@/styles/constants";
+
+#menu-button {
+    height: 2rem;
+    width: 2.5rem;
+
+    &:focus {
+        background: blue;
+    }
+
+    hr {
+        height: 2px;
+        width: 100%;
+        background: var(--accent-color);
+    }
+}
