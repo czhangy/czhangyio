@@ -125,13 +125,25 @@
 
 @media (hover: hover) {
     #navbar {
+        #title-link:hover {
+            color: var(--emph-color);
+        }
+
         #site-options {
             #theme-toggle:hover {
                 background: var(--hover-color);
+
+                #toggle-thumb {
+                    background: var(--emph-color);
+                }
             }
 
             #menu-button:hover {
                 height: 1.6rem;
+
+                hr {
+                    background: var(--emph-color);
+                }
             }
         }
 
