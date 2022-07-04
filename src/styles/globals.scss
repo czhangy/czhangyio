@@ -25,14 +25,10 @@
 body,
 body[data-theme="dark"] {
     --main-color: #{constants.$dark-main-color};
-    --main-hover-color: #{constants.$dark-main-color-hover};
     --accent-color: #{constants.$dark-accent-color};
-}
-
-body[data-theme="light"] {
-    --main-color: #{constants.$light-main-color};
-    --main-hover-color: #{constants.$light-main-color-hover};
-    --accent-color: #{constants.$light-accent-color};
+    --accent-color-svg: #{constants.$dark-accent-color-svg};
+    --hover-color: #{constants.$dark-hover-color};
+    --menu-color: #{constants.$dark-menu-color};
 }
 
 html,
@@ -54,6 +50,7 @@ p {
 
 hr {
     border: none;
+    margin: 0;
 }
 
 button {

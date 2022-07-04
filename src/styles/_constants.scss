@@ -1,10 +1,10 @@
-// Color scheme
-$light-main-color: white;
-$light-main-color-hover: rgb(207, 207, 207);
-$light-accent-color: black;
+// Dark color scheme
 $dark-main-color: rgb(35, 38, 55);
-$dark-main-color-hover: rgb(53, 56, 71);
 $dark-accent-color: white;
+$dark-accent-color-svg: invert(100%) sepia(100%) saturate(2%) hue-rotate(57deg)
+    brightness(113%) contrast(101%);
+$dark-hover-color: rgb(53, 56, 71);
+$dark-menu-color: rgb(21, 22, 32);
 
 // Fonts
 $main-font: "Exo 2", sans-serif;

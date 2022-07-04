@@ -4,6 +4,7 @@ import styles from "@/styles/Nav/Navbar.module.scss";
 import Link from "next/link";
 // Local components
 import MenuButton from "@/components/Nav/MenuButton";
+import NavMenu from "@/components/Nav/NavMenu";
 // React
 import { useState } from "react";
 // TS
@@ -27,6 +28,7 @@ const Navbar: React.FC = () => {
                 <a id={styles["title-link"]}>Charles Zhang</a>
             </Link>
             <MenuButton onClick={toggleMenu} onClose={closeMenu} />
+            <NavMenu open={menuOpen} />
         </nav>
     );
 };
