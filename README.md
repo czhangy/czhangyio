@@ -169,10 +169,11 @@ npm run dev
 
 -   [x] Set up Prisma + PostgreSQL
 
--   [ ] Build nav
+-   [x] Build nav
 
-    -   [ ] Nav links to each page
-    -   [ ] Light mode toggle
+    -   [x] Nav links to each page
+    -   [x] Light mode toggle
+    -   [x] Social links in footer
 
 -   [ ] Build main page
 
