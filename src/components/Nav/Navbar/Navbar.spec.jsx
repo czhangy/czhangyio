@@ -1,5 +1,5 @@
 // Component
-import Navbar from "@/components/Nav/Navbar/Navbar";
+import Navbar from "./Navbar";
 // Libraries
 import "@testing-library/jest-dom";
 import { act, fireEvent, render, screen } from "@testing-library/react";

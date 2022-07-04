@@ -2,4 +2,5 @@
 
 #home {
     height: calc(100vh - constants.$navbar-height);
+    padding: 0 constants.$x-padding;
 }
