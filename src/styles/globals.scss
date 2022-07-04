@@ -4,7 +4,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,400;0,700;1,400;1,700&family=Staatliches&display=swap");
 
 #app {
-    color: white;
     overflow-x: hidden;
 }
 
@@ -19,19 +18,35 @@
     }
 }
 
+* {
+    box-sizing: border-box;
+}
+
+body,
+body[data-theme="dark"] {
+    --main-color: #{constants.$dark-main-color};
+    --main-hover-color: #{constants.$dark-main-color-hover};
+    --accent-color: #{constants.$dark-accent-color};
+}
+
+body[data-theme="light"] {
+    --main-color: #{constants.$light-main-color};
+    --main-hover-color: #{constants.$light-main-color-hover};
+    --accent-color: #{constants.$light-accent-color};
+}
+
 html,
 body {
     padding: 0;
     margin: 0;
+    height: 100vh;
+    background: var(--main-color);
+    color: var(--accent-color);
 }
 
 a {
     color: inherit;
     text-decoration: none;
-}
-
-* {
-    box-sizing: border-box;
 }
 
 p {

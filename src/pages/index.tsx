@@ -3,7 +3,7 @@ import type { NextPage } from "next";
 // Next
 import Head from "next/head";
 // Stylesheet
-import styles from "@/styles/Home.module.scss";
+import styles from "@/styles/Home/Home.module.scss";
 
 const Home: NextPage = () => {
     return (
