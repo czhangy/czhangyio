@@ -1,10 +1,9 @@
 @use "@/styles/constants";
 
 // Google Fonts
-// @import url("https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@400;700&family=Poppins:wght@400;700&family=Bungee&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,400;0,700;1,400;1,700&family=Staatliches&display=swap");
 
 #app {
-    color: white;
     overflow-x: hidden;
 }
 
@@ -19,19 +18,42 @@
     }
 }
 
+* {
+    box-sizing: border-box;
+}
+
+body,
+body[data-theme="dark"] {
+    --main-color: #{constants.$dark-main-color};
+    --accent-color: #{constants.$dark-accent-color};
+    --accent-color-svg: #{constants.$dark-accent-color-svg};
+    --emph-color: #{constants.$dark-emph-color};
+    --emph-color-svg: #{constants.$dark-emph-color-svg};
+    --hover-color: #{constants.$dark-hover-color};
+    --menu-color: #{constants.$dark-menu-color};
+}
+
+body[data-theme="light"] {
+    --main-color: #{constants.$light-main-color};
+    --accent-color: #{constants.$light-accent-color};
+    --accent-color-svg: #{constants.$light-accent-color-svg};
+    --emph-color: #{constants.$light-emph-color};
+    --emph-color-svg: #{constants.$light-emph-color-svg};
+    --hover-color: #{constants.$light-hover-color};
+    --menu-color: #{constants.$light-menu-color};
+}
+
 html,
 body {
     padding: 0;
     margin: 0;
+    background: var(--main-color);
+    color: var(--accent-color);
 }
 
 a {
     color: inherit;
     text-decoration: none;
-}
-
-* {
-    box-sizing: border-box;
 }
 
 p {
@@ -40,6 +62,7 @@ p {
 
 hr {
     border: none;
+    margin: 0;
 }
 
 button {
