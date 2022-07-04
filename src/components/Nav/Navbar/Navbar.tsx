@@ -5,6 +5,7 @@ import Link from "next/link";
 // Local components
 import MenuButton from "./components/MenuButton";
 import NavMenu from "./components/NavMenu";
+import ThemeToggle from "./components/ThemeToggle";
 // React
 import { useState, useEffect } from "react";
 // TS
@@ -35,7 +36,10 @@ const Navbar: React.FC = () => {
             <Link href="/">
                 <a id={styles["title-link"]}>Charles Zhang</a>
             </Link>
-            <MenuButton onClick={toggleMenu} onClose={closeMenu} />
+            <div id={styles["site-options"]}>
+                <ThemeToggle />
+                <MenuButton onClick={toggleMenu} onClose={closeMenu} />
+            </div>
             {menuOpen ? <NavMenu /> : ""}
         </nav>
     );

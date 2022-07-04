@@ -27,8 +27,20 @@ body[data-theme="dark"] {
     --main-color: #{constants.$dark-main-color};
     --accent-color: #{constants.$dark-accent-color};
     --accent-color-svg: #{constants.$dark-accent-color-svg};
+    --emph-color: #{constants.$dark-emph-color};
+    --emph-color-svg: #{constants.$dark-emph-color-svg};
     --hover-color: #{constants.$dark-hover-color};
     --menu-color: #{constants.$dark-menu-color};
+}
+
+body[data-theme="light"] {
+    --main-color: #{constants.$light-main-color};
+    --accent-color: #{constants.$light-accent-color};
+    --accent-color-svg: #{constants.$light-accent-color-svg};
+    --emph-color: #{constants.$light-emph-color};
+    --emph-color-svg: #{constants.$light-emph-color-svg};
+    --hover-color: #{constants.$light-hover-color};
+    --menu-color: #{constants.$light-menu-color};
 }
 
 html,
