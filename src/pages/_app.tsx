@@ -4,6 +4,7 @@ import "@/styles/globals.scss";
 import type { AppProps } from "next/app";
 // Nav components
 import Navbar from "@/components/Nav/Navbar/Navbar";
+import Footer from "@/components/Nav/Footer/Footer";
 // React
 import { useEffect } from "react";
 
@@ -24,6 +25,7 @@ function App({ Component, pageProps }: AppProps) {
         <>
             <Navbar />
             <Component {...pageProps} />
+            <Footer />
         </>
     );
 }
