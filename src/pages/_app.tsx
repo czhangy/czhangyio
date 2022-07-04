@@ -3,7 +3,7 @@ import "@/styles/globals.scss";
 // TS
 import type { AppProps } from "next/app";
 // Nav components
-import Navbar from "@/components/Nav/Navbar";
+import Navbar from "@/components/Nav/Navbar/Navbar";
 
 function App({ Component, pageProps }: AppProps) {
     return (

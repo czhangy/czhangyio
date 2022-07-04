@@ -3,8 +3,8 @@ import styles from "@/styles/Nav/Navbar.module.scss";
 // Next
 import Link from "next/link";
 // Local components
-import MenuButton from "@/components/Nav/MenuButton";
-import NavMenu from "@/components/Nav/NavMenu";
+import MenuButton from "./components/MenuButton";
+import NavMenu from "./components/NavMenu";
 // React
 import { useState } from "react";
 // TS

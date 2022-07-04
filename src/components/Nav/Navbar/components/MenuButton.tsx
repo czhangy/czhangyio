@@ -1,5 +1,5 @@
 // Stylesheet
-import styles from "@/styles/Nav/MenuButton.module.scss";
+import styles from "@/styles/Nav/Navbar.module.scss";
 // TS
 import { SyntheticEvent } from "react";
 
@@ -14,7 +14,6 @@ const MenuButton: React.FC<Props> = ({ onClick, onClose }: Props) => {
             id={styles["menu-button"]}
             onClick={(e: SyntheticEvent) => onClick(e)}
             onBlur={onClose}
-            data-testid="menu-button"
         >
             <hr />
             <hr />
