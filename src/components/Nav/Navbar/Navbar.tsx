@@ -6,7 +6,7 @@ import Link from "next/link";
 import MenuButton from "./components/MenuButton";
 import NavMenu from "./components/NavMenu";
 // React
-import { useState } from "react";
+import { useState, useEffect } from "react";
 // TS
 import { SyntheticEvent } from "react";
 
@@ -22,13 +22,21 @@ const Navbar: React.FC = () => {
     };
     const closeMenu = () => setTimeout(() => setMenuOpen(false), 150);
 
+    // Close menu when user scrolls
+    useEffect(() => {
+        window.addEventListener("scroll", closeMenu);
+        return function cleanup() {
+            window.removeEventListener("scroll", closeMenu);
+        };
+    }, []);
+
     return (
         <nav id={styles.navbar}>
             <Link href="/">
                 <a id={styles["title-link"]}>Charles Zhang</a>
             </Link>
             <MenuButton onClick={toggleMenu} onClose={closeMenu} />
-            <NavMenu open={menuOpen} />
+            {menuOpen ? <NavMenu /> : ""}
         </nav>
     );
 };

@@ -11,6 +11,7 @@ const Home: NextPage = () => {
             <Head>
                 <title>Charles Zhang&apos;s Portfolio</title>
             </Head>
+            Home
         </div>
     );
 };

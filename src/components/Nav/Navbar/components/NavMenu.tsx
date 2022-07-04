@@ -4,16 +4,9 @@ import styles from "@/styles/Nav/Navbar.module.scss";
 import Link from "next/link";
 import Image from "next/image";
 
-type Props = {
-    open: boolean;
-};
-
-const NavMenu: React.FC<Props> = ({ open }: Props) => {
+const NavMenu: React.FC = () => {
     return (
-        <ul
-            id={styles["nav-menu"]}
-            className={open ? styles.open : styles.closed}
-        >
+        <ul id={styles["nav-menu"]}>
             <li>
                 <Link href="/skills">
                     <a className={styles["nav-link"]}>

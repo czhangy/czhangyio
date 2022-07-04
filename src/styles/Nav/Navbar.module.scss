@@ -2,11 +2,13 @@
 
 #navbar {
     height: constants.$navbar-height;
+    width: 100%;
     border-bottom: 2px solid var(--accent-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 2rem;
+    position: fixed;
 
     #title-link {
         font-family: constants.$header-font;
@@ -39,43 +41,34 @@
         top: calc(constants.$navbar-height + 10px);
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         background: var(--menu-color);
         border-radius: 2px;
-        transition: all 0.2s ease;
 
-        .nav-link {
-            padding: 0.7rem 1rem;
+        li {
             width: 100%;
-            display: flex;
-            align-items: center;
 
-            .link-icon {
-                height: 1.1rem;
-                width: 1.1rem;
-                position: relative;
-                filter: var(--accent-color-svg);
-                margin-right: 1rem;
-            }
+            .nav-link {
+                padding: 0.7rem 1rem;
+                width: 100%;
+                display: flex;
+                align-items: center;
 
-            .link-text {
-                font-family: constants.$main-font;
-                color: var(--accent-color);
-                font-size: 1.1rem;
+                .link-icon {
+                    height: 1.1rem;
+                    width: 1.1rem;
+                    position: relative;
+                    filter: var(--accent-color-svg);
+                    margin-right: 1rem;
+                }
+
+                .link-text {
+                    font-family: constants.$main-font;
+                    color: var(--accent-color);
+                    font-size: 1.1rem;
+                }
             }
         }
-    }
-
-    .open {
-        opacity: 1;
-        pointer-events: auto;
-        transform: translateY(0);
-    }
-
-    .closed {
-        opacity: 0;
-        pointer-events: none;
-        transform: translateY(-10px);
     }
 }
 
@@ -85,7 +78,7 @@
             height: 1.6rem;
         }
 
-        #nav-menu > .nav-link:hover {
+        #nav-menu .nav-link:hover {
             background: var(--hover-color);
         }
     }
