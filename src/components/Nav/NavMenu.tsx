@@ -13,6 +13,7 @@ const NavMenu: React.FC<Props> = ({ open }: Props) => {
         <ul
             id={styles["nav-menu"]}
             className={open ? styles.open : styles.closed}
+            data-testid="nav-menu"
         >
             <Link href="/skills">
                 <a className={styles["nav-link"]}>

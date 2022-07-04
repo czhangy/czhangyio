@@ -14,6 +14,7 @@ const MenuButton: React.FC<Props> = ({ onClick, onClose }: Props) => {
             id={styles["menu-button"]}
             onClick={(e: SyntheticEvent) => onClick(e)}
             onBlur={onClose}
+            data-testid="menu-button"
         >
             <hr />
             <hr />
