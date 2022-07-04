@@ -132,6 +132,7 @@
         #site-options {
             #theme-toggle:hover {
                 background: var(--hover-color);
+                border-color: var(--emph-color);
 
                 #toggle-thumb {
                     background: var(--emph-color);
