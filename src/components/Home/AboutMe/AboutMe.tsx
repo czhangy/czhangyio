@@ -3,13 +3,38 @@ import styles from "./AboutMe.module.scss";
 // Next
 import Image from "next/image";
 import Link from "next/link";
+// React
+import { useEffect } from "react";
 
 const AboutMe: React.FC = () => {
+    // Show elements when scrolled into view
+    const showAbout = () => {
+        const els: HTMLCollectionOf<Element> = document.getElementsByClassName(
+            styles.hide
+        );
+        const header: HTMLElement = document.getElementById(
+            styles["about-header"]
+        )!;
+        if (header.getBoundingClientRect().top < window.innerHeight - 350) {
+            Array.from(els).forEach((el) => el.classList.add(styles.show));
+            window.removeEventListener("scroll", showAbout);
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener("scroll", showAbout);
+        return function cleanup() {
+            window.removeEventListener("scroll", showAbout);
+        };
+    }, []);
+
     return (
         <div id={styles["about-me"]}>
-            <h2 id={styles["about-header"]}>About Me</h2>
+            <h2 id={styles["about-header"]} className={styles.hide}>
+                About Me
+            </h2>
             <div id={styles["about-container"]}>
-                <div id={styles["about-image"]}>
+                <div id={styles["about-image"]} className={styles.hide}>
                     <Image
                         src="/assets/images/bitmoji.png"
                         alt=""
@@ -17,7 +42,11 @@ const AboutMe: React.FC = () => {
                         objectFit="contain"
                     />
                 </div>
-                <p id={styles["about-paragraph"]} data-testid="about-paragraph">
+                <p
+                    id={styles["about-paragraph"]}
+                    className={styles.hide}
+                    data-testid="about-paragraph"
+                >
                     Hey! I'm Charles and I'm a fourth-year Computer Science
                     major studying at UCLA. I'm primarily experienced in
                     full-stack development, but I'm open to exploring whatever
@@ -30,7 +59,7 @@ const AboutMe: React.FC = () => {
                     position to be a part of that change.
                 </p>
             </div>
-            <div id={styles["link-container"]}>
+            <div id={styles["link-container"]} className={styles.hide}>
                 <Link href="/about">
                     <a id={styles["about-link"]}>Learn More →</a>
                 </Link>

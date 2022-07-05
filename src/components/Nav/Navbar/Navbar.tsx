@@ -32,18 +32,20 @@ const Navbar: React.FC = () => {
     }, []);
 
     return (
-        <nav id={styles.navbar}>
-            <Link href="/">
-                <a>
-                    <h1 id={styles["title-link"]}>Charles Zhang</h1>
-                </a>
-            </Link>
-            <div id={styles["site-options"]}>
-                <ThemeToggle />
-                <MenuButton onClick={toggleMenu} onClose={closeMenu} />
-            </div>
-            <NavMenu open={menuOpen} />
-        </nav>
+        <div id={styles.navbar}>
+            <nav id={styles["navbar-container"]}>
+                <Link href="/">
+                    <a>
+                        <h1 id={styles["title-link"]}>Charles Zhang</h1>
+                    </a>
+                </Link>
+                <div id={styles["site-options"]}>
+                    <ThemeToggle />
+                    <MenuButton onClick={toggleMenu} onClose={closeMenu} />
+                </div>
+                <NavMenu open={menuOpen} />
+            </nav>
+        </div>
     );
 };
 

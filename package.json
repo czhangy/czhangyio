@@ -9,7 +9,7 @@
         "lint": "next lint",
         "db": "npx prisma db push --schema=./src/prisma/schema.prisma && npx prisma studio --schema=./src/prisma/schema.prisma",
         "test": "jest --coverage",
-        "test:watch": "jest --watch",
+        "test:watch": "jest --watch --coverage",
         "prepare": "husky install"
     },
     "dependencies": {

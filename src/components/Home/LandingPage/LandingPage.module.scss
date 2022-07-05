@@ -15,6 +15,8 @@
         border-radius: 50%;
         border: 5px solid var(--accent-color);
         overflow: hidden;
+        transform: translateY(-30px);
+        transition: constants.$fade-in;
     }
 
     #landing-text {
@@ -22,5 +24,16 @@
         font-size: 3rem;
         letter-spacing: 2px;
         margin-top: 2rem;
+        transform: translateY(30px);
+        transition: constants.$fade-in;
+    }
+
+    .hide {
+        opacity: 0;
+    }
+
+    .show {
+        opacity: 1;
+        transform: translate(0, 0) !important;
     }
 }

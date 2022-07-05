@@ -7,6 +7,7 @@ import styles from "@/styles/pages/Home.module.scss";
 // Local components
 import LandingPage from "@/components/Home/LandingPage/LandingPage";
 import AboutMe from "@/components/Home/AboutMe/AboutMe";
+import MySkills from "@/components/Home/MySkills/MySkills";
 
 const Home: NextPage = () => {
     return (
@@ -16,6 +17,7 @@ const Home: NextPage = () => {
             </Head>
             <LandingPage />
             <AboutMe />
+            <MySkills />
         </div>
     );
 };

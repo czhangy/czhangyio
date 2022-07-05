@@ -1,10 +1,11 @@
 @use "@/styles/constants";
 
 #about-me {
+    max-width: constants.$max-width;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 10rem;
+    padding-bottom: 15rem;
 
     #about-header {
         font-family: constants.$header-font;
@@ -13,6 +14,8 @@
         padding: 0 4rem;
         border-bottom: 5px solid var(--accent-color);
         margin-bottom: 2rem;
+        transform: translateY(-30px);
+        transition: constants.$fade-in;
     }
 
     #about-container {
@@ -28,17 +31,30 @@
             font-family: constants.$main-font;
             font-size: 1.5rem;
             margin-bottom: 2rem;
+            transition: constants.$fade-in;
+            transform: translateY(30px);
         }
     }
 
     #link-container {
         width: 100%;
         text-align: right;
+        transition: constants.$fade-in;
+        transform: translateY(30px);
 
         #about-link {
             font-family: constants.$header-font;
             font-size: 1.1rem;
         }
+    }
+
+    .hide {
+        opacity: 0;
+    }
+
+    .show {
+        opacity: 1;
+        transform: translate(0, 0) !important;
     }
 }
 
@@ -53,6 +69,17 @@
         width: max(80%, 960px);
         margin: 0 auto;
 
+        #about-header {
+            width: 100%;
+            text-align: right;
+            padding: 0;
+            border-bottom: none;
+            text-decoration: underline;
+            text-underline-offset: 0.5rem;
+            color: var(--accent-color);
+            transform: translate(30px, 0);
+        }
+
         #about-container {
             #about-image {
                 display: flex;
@@ -61,11 +88,18 @@
                 width: 22rem;
                 position: relative;
                 margin-right: 2rem;
+                transition: constants.$fade-in;
+                transform: translateX(-30px);
             }
 
             #about-paragraph {
                 width: calc(100% - 24rem);
+                transform: translate(30px, 0);
             }
+        }
+
+        #link-container {
+            transform: translate(30px, 0);
         }
     }
 }
