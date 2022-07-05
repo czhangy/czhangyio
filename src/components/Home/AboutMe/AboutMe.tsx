@@ -2,25 +2,27 @@
 import styles from "./AboutMe.module.scss";
 // Next
 import Image from "next/image";
-import Link from "next/link";
 // React
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+// Home component
+import LearnMore from "@/components/Home/LearnMore";
 
 const AboutMe: React.FC = () => {
+    // Component state
+    const [show, setShow] = useState<boolean>(false);
+
     // Show elements when scrolled into view
     const showAbout = () => {
-        const els: HTMLCollectionOf<Element> = document.getElementsByClassName(
-            styles.hide
-        );
         const header: HTMLElement = document.getElementById(
             styles["about-header"]
         )!;
         if (header.getBoundingClientRect().top < window.innerHeight - 350) {
-            Array.from(els).forEach((el) => el.classList.add(styles.show));
+            setShow(true);
             window.removeEventListener("scroll", showAbout);
         }
     };
 
+    // Init scroll listener to watch scroll into view
     useEffect(() => {
         window.addEventListener("scroll", showAbout);
         return function cleanup() {
@@ -30,11 +32,17 @@ const AboutMe: React.FC = () => {
 
     return (
         <div id={styles["about-me"]}>
-            <h2 id={styles["about-header"]} className={styles.hide}>
+            <h2
+                id={styles["about-header"]}
+                className={show ? styles.show : styles.hide}
+            >
                 About Me
             </h2>
             <div id={styles["about-container"]}>
-                <div id={styles["about-image"]} className={styles.hide}>
+                <div
+                    id={styles["about-image"]}
+                    className={show ? styles.show : styles.hide}
+                >
                     <Image
                         src="/assets/images/bitmoji.png"
                         alt=""
@@ -44,7 +52,7 @@ const AboutMe: React.FC = () => {
                 </div>
                 <p
                     id={styles["about-paragraph"]}
-                    className={styles.hide}
+                    className={show ? styles.show : styles.hide}
                     data-testid="about-paragraph"
                 >
                     Hey! I'm Charles and I'm a fourth-year Computer Science
@@ -59,11 +67,7 @@ const AboutMe: React.FC = () => {
                     position to be a part of that change.
                 </p>
             </div>
-            <div id={styles["link-container"]} className={styles.hide}>
-                <Link href="/about">
-                    <a id={styles["about-link"]}>Learn More →</a>
-                </Link>
-            </div>
+            <LearnMore show={show} url="about" />
         </div>
     );
 };

@@ -2,4 +2,37 @@
 
 #home {
     padding: 0 constants.$x-padding;
+
+    #learn-more {
+        width: 100%;
+        text-align: right;
+        transition: constants.$fade-in;
+        transform: translateY(30px);
+
+        #learn-more-link {
+            font-family: constants.$header-font;
+            font-size: 1.1rem;
+        }
+    }
+
+    .hide {
+        opacity: 0;
+    }
+
+    .show {
+        opacity: 1;
+        transform: translate(0, 0) !important;
+    }
+}
+
+@media (hover: hover) {
+    #home #learn-more > #learn-more-link:hover {
+        color: var(--emph-color);
+    }
+}
+
+@media screen and (min-width: constants.$tablet) {
+    #home #learn-more {
+        transform: translate(30px, 0);
+    }
 }
