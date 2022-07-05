@@ -1,11 +1,11 @@
 // Component
-import AboutPage from "./AboutPage";
+import AboutMe from "./AboutMe";
 // Libraries
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
 
-describe("<LandingPage />", () => {
-    beforeEach(() => render(<AboutPage />));
+describe("<AboutMe />", () => {
+    beforeEach(() => render(<AboutMe />));
     it("Renders header", () => {
         const header = screen.queryByText("About Me");
         expect(header).toBeInTheDocument();

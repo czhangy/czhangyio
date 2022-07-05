@@ -178,7 +178,7 @@ npm run dev
 -   [ ] Build main page
 
     -   [x] Landing page
-    -   [ ] About me
+    -   [x] About me
     -   [ ] Skills carousel
     -   [ ] Projects carousel
     -   [ ] Smooth animations with scroll

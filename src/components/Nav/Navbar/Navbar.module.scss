@@ -95,6 +95,7 @@
         align-items: flex-start;
         background: var(--menu-color);
         border-radius: 2px;
+        transition: all 0.2s ease;
 
         li {
             width: 100%;
@@ -120,6 +121,14 @@
                 }
             }
         }
+    }
+
+    .open {
+        transform: translateY(0);
+    }
+
+    .closed {
+        transform: translateY(-10px);
     }
 }
 

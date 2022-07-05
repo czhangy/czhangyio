@@ -1,6 +1,6 @@
 @use "@/styles/constants";
 
-#about-page {
+#about-me {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -43,13 +43,13 @@
 }
 
 @media (hover: hover) {
-    #about-page > #link-container > #about-link:hover {
+    #about-me > #link-container > #about-link:hover {
         color: var(--emph-color);
     }
 }
 
 @media screen and (min-width: constants.$tablet) {
-    #about-page {
+    #about-me {
         width: max(80%, 960px);
         margin: 0 auto;
 

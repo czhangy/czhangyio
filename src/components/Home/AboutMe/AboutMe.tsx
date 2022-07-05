@@ -1,12 +1,12 @@
 // Stylesheet
-import styles from "./AboutPage.module.scss";
+import styles from "./AboutMe.module.scss";
 // Next
 import Image from "next/image";
 import Link from "next/link";
 
-const AboutPage = () => {
+const AboutMe: React.FC = () => {
     return (
-        <div id={styles["about-page"]}>
+        <div id={styles["about-me"]}>
             <h2 id={styles["about-header"]}>About Me</h2>
             <div id={styles["about-container"]}>
                 <div id={styles["about-image"]}>
@@ -39,4 +39,4 @@ const AboutPage = () => {
     );
 };
 
-export default AboutPage;
+export default AboutMe;

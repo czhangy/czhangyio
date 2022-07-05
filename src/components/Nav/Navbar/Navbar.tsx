@@ -42,7 +42,7 @@ const Navbar: React.FC = () => {
                 <ThemeToggle />
                 <MenuButton onClick={toggleMenu} onClose={closeMenu} />
             </div>
-            {menuOpen ? <NavMenu /> : ""}
+            <NavMenu open={menuOpen} />
         </nav>
     );
 };
