@@ -1,5 +1,5 @@
 // Stylesheet
-import styles from "@/styles/Nav/Navbar.module.scss";
+import styles from "../Navbar.module.scss";
 // React
 import { useEffect, useState } from "react";
 // Next

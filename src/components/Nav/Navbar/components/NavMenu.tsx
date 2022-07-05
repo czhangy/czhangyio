@@ -1,5 +1,5 @@
 // Stylesheet
-import styles from "@/styles/Nav/Navbar.module.scss";
+import styles from "../Navbar.module.scss";
 // Next
 import Link from "next/link";
 import Image from "next/image";

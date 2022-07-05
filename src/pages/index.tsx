@@ -3,9 +3,10 @@ import type { NextPage } from "next";
 // Next
 import Head from "next/head";
 // Stylesheet
-import styles from "@/styles/Home/Home.module.scss";
+import styles from "@/styles/pages/Home.module.scss";
 // Local components
 import LandingPage from "@/components/Home/LandingPage/LandingPage";
+import AboutPage from "@/components/Home/AboutPage/AboutPage";
 
 const Home: NextPage = () => {
     return (
@@ -14,6 +15,7 @@ const Home: NextPage = () => {
                 <title>Charles Zhang&apos;s Portfolio</title>
             </Head>
             <LandingPage />
+            <AboutPage />
         </div>
     );
 };

@@ -7,7 +7,7 @@ import { act, fireEvent, render, screen } from "@testing-library/react";
 describe("<Navbar />", () => {
     beforeEach(() => render(<Navbar />));
     it("Renders the site title", () => {
-        const siteTitle = screen.queryByText("Charles Zhang");
+        const siteTitle = screen.queryByText("Charles Zhang").closest("a");
         expect(siteTitle).toBeInTheDocument();
         expect(siteTitle).toHaveAttribute("href", "/");
     });

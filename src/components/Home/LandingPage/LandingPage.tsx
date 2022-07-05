@@ -1,5 +1,5 @@
 // Stylesheet
-import styles from "@/styles/Home/LandingPage.module.scss";
+import styles from "./LandingPage.module.scss";
 // Next
 import Image from "next/image";
 

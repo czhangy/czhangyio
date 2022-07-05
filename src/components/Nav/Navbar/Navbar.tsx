@@ -1,5 +1,5 @@
 // Stylesheet
-import styles from "@/styles/Nav/Navbar.module.scss";
+import styles from "./Navbar.module.scss";
 // Next
 import Link from "next/link";
 // Local components
@@ -34,7 +34,9 @@ const Navbar: React.FC = () => {
     return (
         <nav id={styles.navbar}>
             <Link href="/">
-                <a id={styles["title-link"]}>Charles Zhang</a>
+                <a>
+                    <h1 id={styles["title-link"]}>Charles Zhang</h1>
+                </a>
             </Link>
             <div id={styles["site-options"]}>
                 <ThemeToggle />

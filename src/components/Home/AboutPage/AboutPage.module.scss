@@ -1,0 +1,71 @@
+@use "@/styles/constants";
+
+#about-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10rem;
+
+    #about-header {
+        font-family: constants.$header-font;
+        font-size: 3rem;
+        letter-spacing: 2px;
+        padding: 0 4rem;
+        border-bottom: 5px solid var(--accent-color);
+        margin-bottom: 2rem;
+    }
+
+    #about-container {
+        display: flex;
+        align-items: center;
+        width: 100%;
+
+        #about-image {
+            display: none;
+        }
+
+        #about-paragraph {
+            font-family: constants.$main-font;
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+    }
+
+    #link-container {
+        width: 100%;
+        text-align: right;
+
+        #about-link {
+            font-family: constants.$header-font;
+            font-size: 1.1rem;
+        }
+    }
+}
+
+@media (hover: hover) {
+    #about-page > #link-container > #about-link:hover {
+        color: var(--emph-color);
+    }
+}
+
+@media screen and (min-width: constants.$tablet) {
+    #about-page {
+        width: max(80%, 960px);
+        margin: 0 auto;
+
+        #about-container {
+            #about-image {
+                display: flex;
+                justify-content: flex-start;
+                height: 20rem;
+                width: 22rem;
+                position: relative;
+                margin-right: 2rem;
+            }
+
+            #about-paragraph {
+                width: calc(100% - 24rem);
+            }
+        }
+    }
+}
