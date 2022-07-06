@@ -6,27 +6,22 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 // Home component
 import LearnMore from "@/components/Home/LearnMore";
+// Helper function
+import { showElements } from "@/utils/helpers";
 
 const AboutMe: React.FC = () => {
     // Component state
     const [show, setShow] = useState<boolean>(false);
 
-    // Show elements when scrolled into view
-    const showAbout = () => {
-        const header: HTMLElement = document.getElementById(
-            styles["about-header"]
-        )!;
-        if (header.getBoundingClientRect().top < window.innerHeight - 350) {
-            setShow(true);
-            window.removeEventListener("scroll", showAbout);
-        }
-    };
-
     // Init scroll listener to watch scroll into view
     useEffect(() => {
-        window.addEventListener("scroll", showAbout);
+        window.addEventListener("scroll", () =>
+            showElements(styles["about-header"], setShow)
+        );
         return function cleanup() {
-            window.removeEventListener("scroll", showAbout);
+            window.removeEventListener("scroll", () =>
+                showElements(styles["about-header"], setShow)
+            );
         };
     }, []);
 

@@ -35,4 +35,4 @@ $max-width: 1360px;
 $homepage-padding: 15rem;
 
 // Animation
-$fade-in: all 1.5s ease;
+$fade-in: opacity 1.5s ease, transform 1.5s ease;

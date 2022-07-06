@@ -4,27 +4,22 @@ import styles from "./MySkills.module.scss";
 import { useEffect, useState } from "react";
 // Home component
 import LearnMore from "@/components/Home/LearnMore";
+// Helper function
+import { showElements } from "@/utils/helpers";
 
 const MySkills: React.FC = () => {
     // Component state
     const [show, setShow] = useState<boolean>(false);
 
-    // Show elements when scrolled into view
-    const showSkills = () => {
-        const header: HTMLElement = document.getElementById(
-            styles["skills-header"]
-        )!;
-        if (header.getBoundingClientRect().top < window.innerHeight - 350) {
-            setShow(true);
-            window.removeEventListener("scroll", showSkills);
-        }
-    };
-
     // Init scroll listener to watch scroll into view
     useEffect(() => {
-        window.addEventListener("scroll", showSkills);
+        window.addEventListener("scroll", () =>
+            showElements(styles["skills-header"], setShow)
+        );
         return function cleanup() {
-            window.removeEventListener("scroll", showSkills);
+            window.removeEventListener("scroll", () =>
+                showElements(styles["skills-header"], setShow)
+            );
         };
     }, []);
 
