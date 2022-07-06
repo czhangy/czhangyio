@@ -3,13 +3,39 @@ import styles from "./MySkills.module.scss";
 // React
 import { useEffect, useState } from "react";
 // Home component
-import LearnMore from "@/components/Home/LearnMore";
+import SeeMore from "@/components/Home/SeeMore";
 // Helper function
 import { showElements } from "@/utils/helpers";
+// Local component
+import SkillCarousel from "./components/SkillCarousel";
 
 const MySkills: React.FC = () => {
     // Component state
     const [show, setShow] = useState<boolean>(false);
+
+    // Constant
+    const skillMap: { [key: string]: string[] } = {
+        Languages: ["C++", "HTML/CSS", "JavaScript", "SASS", "TypeScript"],
+        "Full-Stack Development": [
+            "ExpressJS",
+            "NextJS",
+            "NodeJS",
+            "ReactJS",
+            "VueJS",
+        ],
+        "Software Tools": [
+            "Git",
+            "Heroku",
+            "Jest",
+            "Jira",
+            "MongoDB",
+            "MySQL",
+            "Prisma",
+            "Testing Library",
+            "UNIX",
+            "Vercel",
+        ],
+    };
 
     // Init scroll listener to watch scroll into view
     useEffect(() => {
@@ -31,7 +57,26 @@ const MySkills: React.FC = () => {
             >
                 My Skills
             </h2>
-            <LearnMore show={show} url="skills" />
+            <div className={styles["skill-row"]}>
+                <SkillCarousel
+                    groupName="Languages"
+                    skills={skillMap["Languages"]}
+                    viewport={3}
+                />
+                <SkillCarousel
+                    groupName="Full-Stack Development"
+                    skills={skillMap["Full-Stack Development"]}
+                    viewport={3}
+                />
+            </div>
+            <div className={styles["skill-row"]}>
+                <SkillCarousel
+                    groupName="Software Tools"
+                    skills={skillMap["Software Tools"]}
+                    viewport={5}
+                />
+            </div>
+            <SeeMore show={show} url="skills" />
         </div>
     );
 };

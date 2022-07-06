@@ -5,7 +5,7 @@ import Image from "next/image";
 // React
 import { useEffect, useState } from "react";
 // Home component
-import LearnMore from "@/components/Home/LearnMore";
+import SeeMore from "@/components/Home/SeeMore";
 // Helper function
 import { showElements } from "@/utils/helpers";
 
@@ -62,7 +62,7 @@ const AboutMe: React.FC = () => {
                     position to be a part of that change.
                 </p>
             </div>
-            <LearnMore show={show} url="about" />
+            <SeeMore show={show} url="about" />
         </div>
     );
 };

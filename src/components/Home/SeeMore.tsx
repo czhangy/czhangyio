@@ -8,17 +8,17 @@ type Props = {
     url: string;
 };
 
-const LearnMore: React.FC<Props> = ({ show, url }: Props) => {
+const SeeMore: React.FC<Props> = ({ show, url }: Props) => {
     return (
         <div
-            id={styles["learn-more"]}
+            id={styles["see-more"]}
             className={show ? styles.show : styles.hide}
         >
             <Link href={`/${url}`}>
-                <a id={styles["learn-more-link"]}>Learn More →</a>
+                <a id={styles["see-more-link"]}>See More →</a>
             </Link>
         </div>
     );
 };
 
-export default LearnMore;
+export default SeeMore;
