@@ -2,6 +2,7 @@
 import styles from "./MySkills.module.scss";
 // React
 import { useEffect, useState } from "react";
+import { useMediaQuery } from "react-responsive";
 // Home component
 import SeeMore from "@/components/Home/SeeMore";
 // Helper function
@@ -10,6 +11,9 @@ import { showElements } from "@/utils/helpers";
 import SkillCarousel from "./components/SkillCarousel";
 
 const MySkills: React.FC = () => {
+    // Hook => check screen size
+    const isDesktop = useMediaQuery({ query: `(min-width: 1023px)` });
+
     // Component state
     const [show, setShow] = useState<boolean>(false);
 
@@ -78,7 +82,7 @@ const MySkills: React.FC = () => {
                     <SkillCarousel
                         groupName="Software Tools"
                         skills={skillMap["Software Tools"]}
-                        viewport={3}
+                        viewport={isDesktop ? 5 : 3}
                     />
                 </div>
             </div>
