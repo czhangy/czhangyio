@@ -57,24 +57,30 @@ const MySkills: React.FC = () => {
             >
                 My Skills
             </h2>
-            <div className={styles["skill-row"]}>
-                <SkillCarousel
-                    groupName="Languages"
-                    skills={skillMap["Languages"]}
-                    viewport={3}
-                />
-                <SkillCarousel
-                    groupName="Full-Stack Development"
-                    skills={skillMap["Full-Stack Development"]}
-                    viewport={3}
-                />
-            </div>
-            <div className={styles["skill-row"]}>
-                <SkillCarousel
-                    groupName="Software Tools"
-                    skills={skillMap["Software Tools"]}
-                    viewport={5}
-                />
+            <div
+                className={`${styles["skill-content"]} ${
+                    show ? styles.show : styles.hide
+                }`}
+            >
+                <div className={styles["skill-row"]}>
+                    <SkillCarousel
+                        groupName="Languages"
+                        skills={skillMap["Languages"]}
+                        viewport={3}
+                    />
+                    <SkillCarousel
+                        groupName="Full-Stack Development"
+                        skills={skillMap["Full-Stack Development"]}
+                        viewport={3}
+                    />
+                </div>
+                <div className={styles["skill-row"]}>
+                    <SkillCarousel
+                        groupName="Software Tools"
+                        skills={skillMap["Software Tools"]}
+                        viewport={3}
+                    />
+                </div>
             </div>
             <SeeMore show={show} url="skills" />
         </div>

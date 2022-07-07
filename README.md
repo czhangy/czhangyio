@@ -179,7 +179,7 @@ npm run dev
 
     -   [x] Landing page
     -   [x] About me
-    -   [ ] Skills carousel
+    -   [x] Skills carousel
     -   [ ] Projects carousel
     -   [ ] Smooth animations with scroll
 
