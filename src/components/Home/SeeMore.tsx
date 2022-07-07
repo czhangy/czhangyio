@@ -10,12 +10,9 @@ type Props = {
 
 const SeeMore: React.FC<Props> = ({ show, url }: Props) => {
     return (
-        <div
-            id={styles["see-more"]}
-            className={show ? styles.show : styles.hide}
-        >
+        <div className={`${styles["see-more"]} ${show ? "show" : "hide"}`}>
             <Link href={`/${url}`}>
-                <a id={styles["see-more-link"]}>See More →</a>
+                <a className={styles["see-more-link"]}>See More →</a>
             </Link>
         </div>
     );

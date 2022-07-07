@@ -1,33 +1,33 @@
 @use "@/styles/constants";
 
-#about-me {
-    max-width: constants.$max-width;
+.about-me {
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    max-width: constants.$max-width;
     padding-bottom: constants.$homepage-padding;
 
-    #about-header {
+    .about-header {
+        border-bottom: 5px solid var(--accent-color);
         font-family: constants.$header-font;
         font-size: 3rem;
         letter-spacing: 2px;
-        padding: 0 4rem;
-        border-bottom: 5px solid var(--accent-color);
         margin-bottom: 2rem;
+        padding: 0 4rem;
         transform: translateY(-30px);
         transition: constants.$fade-in;
     }
 
-    #about-container {
-        display: flex;
+    .about-container {
         align-items: center;
+        display: flex;
         width: 100%;
 
-        #about-image {
+        .about-image {
             display: none;
         }
 
-        #about-paragraph {
+        .about-paragraph {
             font-family: constants.$main-font;
             font-size: 1.5rem;
             margin-bottom: 2rem;
@@ -35,48 +35,39 @@
             transform: translateY(30px);
         }
     }
-
-    .hide {
-        opacity: 0;
-    }
-
-    .show {
-        opacity: 1;
-        transform: translate(0, 0) !important;
-    }
 }
 
 @media screen and (min-width: constants.$tablet) {
-    #about-me {
-        width: max(80%, 960px);
+    .about-me {
         margin: 0 auto;
+        width: max(80%, 960px);
 
-        #about-header {
-            width: 100%;
-            text-align: right;
-            padding: 0;
+        .about-header {
             border-bottom: none;
+            color: var(--accent-color);
+            padding: 0;
+            text-align: right;
             text-decoration: underline;
             text-underline-offset: 0.5rem;
-            color: var(--accent-color);
             transform: translate(30px, 0);
+            width: 100%;
         }
 
-        #about-container {
-            #about-image {
+        .about-container {
+            .about-image {
                 display: flex;
-                justify-content: flex-start;
                 height: 20rem;
-                width: 22rem;
-                position: relative;
+                justify-content: flex-start;
                 margin-right: 2rem;
-                transition: constants.$fade-in;
+                position: relative;
                 transform: translateX(-30px);
+                transition: constants.$fade-in;
+                width: 22rem;
             }
 
-            #about-paragraph {
-                width: calc(100% - 24rem);
+            .about-paragraph {
                 transform: translate(30px, 0);
+                width: calc(100% - 24rem);
             }
         }
     }

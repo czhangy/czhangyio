@@ -18,37 +18,46 @@
     }
 }
 
+.hide {
+    opacity: 0;
+}
+
+.show {
+    opacity: 1;
+    transform: translate(0, 0) !important;
+}
+
 * {
     box-sizing: border-box;
 }
 
 body,
 body[data-theme="dark"] {
-    --main-color: #{constants.$dark-main-color};
     --accent-color: #{constants.$dark-accent-color};
     --accent-color-svg: #{constants.$dark-accent-color-svg};
     --emph-color: #{constants.$dark-emph-color};
     --emph-color-svg: #{constants.$dark-emph-color-svg};
     --hover-color: #{constants.$dark-hover-color};
+    --main-color: #{constants.$dark-main-color};
     --menu-color: #{constants.$dark-menu-color};
 }
 
 body[data-theme="light"] {
-    --main-color: #{constants.$light-main-color};
     --accent-color: #{constants.$light-accent-color};
     --accent-color-svg: #{constants.$light-accent-color-svg};
     --emph-color: #{constants.$light-emph-color};
     --emph-color-svg: #{constants.$light-emph-color-svg};
     --hover-color: #{constants.$light-hover-color};
+    --main-color: #{constants.$light-main-color};
     --menu-color: #{constants.$light-menu-color};
 }
 
 html,
 body {
-    padding: 0;
-    margin: 0;
     background: var(--main-color);
     color: var(--accent-color);
+    margin: 0;
+    padding: 0;
     transition: all 0.1s ease;
 }
 
@@ -87,12 +96,12 @@ h3,
 h4,
 h5,
 h6 {
-    margin: 0;
     font-weight: normal;
+    margin: 0;
 }
 
 ul {
     list-style: none;
-    padding: 0;
     margin: 0;
+    padding: 0;
 }

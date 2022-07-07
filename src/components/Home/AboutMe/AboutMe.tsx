@@ -16,27 +16,30 @@ const AboutMe: React.FC = () => {
     // Init scroll listener to watch scroll into view
     useEffect(() => {
         window.addEventListener("scroll", () =>
-            showElements(styles["about-header"], setShow)
+            showElements("about-header", setShow)
         );
         return function cleanup() {
             window.removeEventListener("scroll", () =>
-                showElements(styles["about-header"], setShow)
+                showElements("about-header", setShow)
             );
         };
     }, []);
 
     return (
-        <div id={styles["about-me"]}>
+        <div className={styles["about-me"]}>
             <h2
-                id={styles["about-header"]}
-                className={show ? styles.show : styles.hide}
+                id="about-header"
+                className={`${styles["about-header"]} ${
+                    show ? "show" : "hide"
+                }`}
             >
                 About Me
             </h2>
-            <div id={styles["about-container"]}>
+            <div className={styles["about-container"]}>
                 <div
-                    id={styles["about-image"]}
-                    className={show ? styles.show : styles.hide}
+                    className={`${styles["about-image"]} ${
+                        show ? "show" : "hide"
+                    }`}
                 >
                     <Image
                         src="/assets/images/bitmoji.png"
@@ -46,8 +49,9 @@ const AboutMe: React.FC = () => {
                     />
                 </div>
                 <p
-                    id={styles["about-paragraph"]}
-                    className={show ? styles.show : styles.hide}
+                    className={`${styles["about-paragraph"]} ${
+                        show ? "show" : "hide"
+                    }`}
                     data-testid="about-paragraph"
                 >
                     Hey! I'm Charles and I'm a fourth-year Computer Science

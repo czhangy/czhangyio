@@ -29,11 +29,10 @@ const ThemeToggle: React.FC = () => {
 
     return (
         <button
-            id={styles["theme-toggle"]}
-            className={styles[currentTheme]}
+            className={`${styles["theme-toggle"]} ${styles[currentTheme]}`}
             onClick={toggleTheme}
         >
-            <div id={styles["toggle-icon"]}>
+            <div className={styles["toggle-icon"]}>
                 <Image
                     src={
                         currentTheme === "dark"
@@ -45,7 +44,7 @@ const ThemeToggle: React.FC = () => {
                     objectFit="contain"
                 />
             </div>
-            <div id={styles["toggle-thumb"]} />
+            <div className={styles["toggle-thumb"]} />
         </button>
     );
 };

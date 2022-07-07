@@ -10,16 +10,11 @@ const LandingPage: React.FC = () => {
     const [show, setShow] = useState<boolean>(false);
 
     // Animate page elements on mount
-    useEffect(() => {
-        setShow(true);
-    }, []);
+    useEffect(() => setShow(true), []);
 
     return (
-        <div id={styles["landing-page"]}>
-            <div
-                id={styles.headshot}
-                className={show ? styles.show : styles.hide}
-            >
+        <div className={styles["landing-page"]}>
+            <div className={`${styles.headshot} ${show ? "show" : "hide"}`}>
                 <Image
                     src="/assets/images/headshot.webp"
                     alt="Headshot"
@@ -29,8 +24,9 @@ const LandingPage: React.FC = () => {
                 />
             </div>
             <h2
-                id={styles["landing-text"]}
-                className={show ? styles.show : styles.hide}
+                className={`${styles["landing-text"]} ${
+                    show ? "show" : "hide"
+                }`}
             >
                 Hi, I&apos;m Charles.
             </h2>

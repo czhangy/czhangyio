@@ -32,14 +32,14 @@ const Navbar: React.FC = () => {
     }, []);
 
     return (
-        <div id={styles.navbar}>
-            <nav id={styles["navbar-container"]}>
+        <div className={styles.navbar}>
+            <nav className={styles["navbar-container"]}>
                 <Link href="/">
                     <a>
-                        <h1 id={styles["title-link"]}>Charles Zhang</h1>
+                        <h1 className={styles["title-link"]}>Charles Zhang</h1>
                     </a>
                 </Link>
-                <div id={styles["site-options"]}>
+                <div className={styles["site-options"]}>
                     <ThemeToggle />
                     <MenuButton onClick={toggleMenu} onClose={closeMenu} />
                 </div>

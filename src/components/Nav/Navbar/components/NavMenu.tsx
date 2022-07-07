@@ -11,8 +11,9 @@ type Props = {
 const NavMenu: React.FC<Props> = ({ open }: Props) => {
     return (
         <ul
-            id={styles["nav-menu"]}
-            className={open ? styles.open : styles.closed}
+            className={`${styles["nav-menu"]} ${
+                open ? styles.open : styles.closed
+            }`}
             style={{ opacity: open ? 1 : 0 }}
         >
             <li>

@@ -1,13 +1,13 @@
 @use "@/styles/constants";
 
-#my-skills {
+.my-skills {
     align-items: center;
     display: flex;
     flex-direction: column;
     max-width: constants.$max-width;
     padding-bottom: constants.$homepage-padding;
 
-    #skills-header {
+    .skills-header {
         border-bottom: 5px solid var(--accent-color);
         color: var(--accent-color);
         font-family: constants.$header-font;
@@ -109,23 +109,14 @@
             }
         }
     }
-
-    .hide {
-        opacity: 0;
-    }
-
-    .show {
-        opacity: 1;
-        transform: translate(0, 0) !important;
-    }
 }
 
 @media screen and (min-width: constants.$tablet) {
-    #my-skills {
+    .my-skills {
         margin: 0 auto;
         width: max(80%, 960px);
 
-        #skills-header {
+        .skills-header {
             border-bottom: none;
             padding: 0;
             text-align: left;

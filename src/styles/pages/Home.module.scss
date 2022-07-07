@@ -3,36 +3,27 @@
 #home {
     padding: 0 constants.$x-padding;
 
-    #see-more {
-        width: 100%;
+    .see-more {
         text-align: right;
         transition: constants.$fade-in;
         transform: translateY(30px);
+        width: 100%;
 
-        #see-more-link {
+        .see-more-link {
             font-family: constants.$header-font;
             font-size: 1.1rem;
         }
     }
-
-    .hide {
-        opacity: 0;
-    }
-
-    .show {
-        opacity: 1;
-        transform: translate(0, 0) !important;
-    }
 }
 
 @media (hover: hover) {
-    #home #see-more #see-more-link:hover {
+    #home .see-more .see-more-link:hover {
         color: var(--emph-color);
     }
 }
 
 @media screen and (min-width: constants.$tablet) {
-    #home #see-more {
+    #home .see-more {
         transform: translate(30px, 0);
     }
 }

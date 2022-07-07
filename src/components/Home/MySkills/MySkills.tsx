@@ -44,26 +44,28 @@ const MySkills: React.FC = () => {
     // Init scroll listener to watch scroll into view
     useEffect(() => {
         window.addEventListener("scroll", () =>
-            showElements(styles["skills-header"], setShow)
+            showElements("skills-header", setShow)
         );
         return function cleanup() {
             window.removeEventListener("scroll", () =>
-                showElements(styles["skills-header"], setShow)
+                showElements("skills-header", setShow)
             );
         };
     }, []);
 
     return (
-        <div id={styles["my-skills"]}>
+        <div className={styles["my-skills"]}>
             <h2
-                id={styles["skills-header"]}
-                className={show ? styles.show : styles.hide}
+                id="skills-header"
+                className={`${styles["skills-header"]} ${
+                    show ? "show" : "hide"
+                }`}
             >
                 My Skills
             </h2>
             <div
                 className={`${styles["skill-content"]} ${
-                    show ? styles.show : styles.hide
+                    show ? "show" : "hide"
                 }`}
             >
                 <div className={styles["skill-row"]}>
