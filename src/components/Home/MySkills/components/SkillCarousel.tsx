@@ -5,7 +5,6 @@ import { useEffect, useState } from "react";
 // Local component
 import SkillButton from "./SkillButton";
 // Helper function
-import { centerArray } from "@/utils/helpers";
 
 type Props = {
     groupName: string;
@@ -16,29 +15,28 @@ type Props = {
 const SkillCarousel: React.FC<Props> = (props: Props) => {
     // Component state
     const [index, setIndex] = useState<number>(0);
-    const [positions, setPositions] = useState<number[]>([
-        250, 400, 550, -50, 100,
-    ]);
+    const [positions, setPositions] = useState<number[]>([]);
 
-    // Initialize carousel element positions
+    // Calculate hidden indices
+    const isHidden = (i: number) => {
+        return (
+            Math.abs(positions[i] - 250) > Math.floor(props.viewport / 2) * 200
+        );
+    };
+
+    // Calculate new carousel element positions
     useEffect(() => {
-        let initPositions: number[] = [...positions];
-        // for (let i = 0; i < props.skills.length; i++)
-        //     initPositions.push(
-        //         (i - Math.floor(props.skills.length / 2)) * 150 + 250
-        //     );
-        initPositions = centerArray(initPositions, index);
-        setPositions(initPositions);
+        let newArr: any[] = [];
+        const half: number = Math.floor(props.skills.length / 2);
+        for (let i = 0; i < props.skills.length; i++) {
+            const di = i - half;
+            newArr[i] = di * 200 + 250;
+        }
+        newArr = newArr
+            .slice(half - index)
+            .concat(newArr.slice(0, half - index));
+        setPositions(newArr);
     }, [index]);
-
-    // Update carousel element positions on index change
-    // useEffect(() => {
-    //     if (positions.length > 0) {
-    //         let curPositions: number[] = [...positions];
-    //         curPositions = centerArray(curPositions, index);
-    //         setPositions(curPositions);
-    //     }
-    // }, [index]);
 
     return (
         <div className={styles["skill-carousel"]}>
@@ -47,7 +45,7 @@ const SkillCarousel: React.FC<Props> = (props: Props) => {
                 {props.skills.map((skill: string, i: number) => {
                     return (
                         <SkillButton
-                            hidden={false}
+                            hidden={isHidden(i)}
                             onClick={() => setIndex(i)}
                             position={positions[i]}
                             selected={i === index}
