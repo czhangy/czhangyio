@@ -80,7 +80,7 @@ const MySkills: React.FC = () => {
                         viewport={3}
                     />
                 </div>
-                <div className={styles["skill-row"]}>
+                <div className={`${styles["skill-row"]} ${styles.center}`}>
                     <SkillCarousel
                         groupName="Software Tools"
                         skills={skillMap["Software Tools"]}

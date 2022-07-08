@@ -4,6 +4,8 @@ import styles from "../MySkills.module.scss";
 import { useEffect, useState } from "react";
 // Local component
 import SkillButton from "./SkillButton";
+// Next
+import Image from "next/image";
 
 type Props = {
     groupName: string;
@@ -15,6 +17,13 @@ const SkillCarousel: React.FC<Props> = (props: Props) => {
     // Component state
     const [index, setIndex] = useState<number>(0);
     const [positions, setPositions] = useState<number[]>([]);
+    const [displacement, setDisplacement] = useState<number>(0);
+
+    // Page state modifiers
+    const nextPage = () => setIndex((index + 1) % props.skills.length);
+    const prevPage = () => {
+        setIndex(index === 0 ? props.skills.length - 1 : index - 1);
+    };
 
     // Calculate hidden indices
     const isHidden = (i: number) => {
@@ -37,10 +46,29 @@ const SkillCarousel: React.FC<Props> = (props: Props) => {
         setPositions(newArr);
     }, [index]);
 
+    // Calculate carousel nav displacement based on viewport size
+    useEffect(() => {
+        setDisplacement(-140 * (Math.floor(props.viewport / 2) - 1) + 20);
+    }, [props.viewport]);
+
     return (
         <div className={styles["skill-carousel"]}>
             <h4 className={styles["carousel-name"]}>{props.groupName}</h4>
             <div className={styles["carousel-container"]}>
+                <button
+                    className={`${styles["carousel-nav"]} ${styles.left}`}
+                    style={{
+                        left: `${displacement}px`,
+                    }}
+                    onClick={prevPage}
+                >
+                    <Image
+                        src="/assets/icons/arrow.svg"
+                        alt="Previous skill"
+                        layout="fill"
+                        objectFit="contain"
+                    />
+                </button>
                 {props.skills.map((skill: string, i: number) => {
                     return (
                         <SkillButton
@@ -53,6 +81,18 @@ const SkillCarousel: React.FC<Props> = (props: Props) => {
                         />
                     );
                 })}
+                <button
+                    className={`${styles["carousel-nav"]}`}
+                    style={{ right: `${displacement}px` }}
+                    onClick={nextPage}
+                >
+                    <Image
+                        src="/assets/icons/arrow.svg"
+                        alt="Next skill"
+                        layout="fill"
+                        objectFit="contain"
+                    />
+                </button>
             </div>
         </div>
     );

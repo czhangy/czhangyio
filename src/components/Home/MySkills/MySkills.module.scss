@@ -22,15 +22,14 @@
     .skill-content {
         transform: translateY(30px);
         transition: constants.$fade-in;
+        width: 100%;
 
         .skill-row {
             align-items: center;
             display: flex;
             flex-direction: column;
-            justify-content: space-evenly;
             overflow-x: hidden;
             margin-bottom: 2.5rem;
-            width: 100%;
 
             &:last-child {
                 margin-bottom: 0;
@@ -48,12 +47,13 @@
                     font-size: 2rem;
                     letter-spacing: 1px;
                     margin: 0 auto;
-                    margin-bottom: 2rem;
+                    margin-bottom: 1rem;
                     text-align: center;
                     width: 500px;
                 }
 
                 .carousel-container {
+                    align-items: center;
                     display: flex;
                     height: 12rem;
                     position: relative;
@@ -105,9 +105,31 @@
                         pointer-events: none;
                         transform: translateX(-50%) scale(0.1);
                     }
+
+                    .carousel-nav {
+                        filter: var(--accent-color-svg);
+                        height: 2rem;
+                        position: absolute;
+                        width: 1.5rem;
+                    }
+
+                    .left {
+                        transform: rotate(180deg);
+                    }
                 }
             }
         }
+    }
+}
+
+@media (hover: hover) {
+    .my-skills
+        .skill-content
+        .skill-row
+        .skill-carousel
+        .carousel-container
+        .carousel-nav:hover {
+        filter: var(--emph-color-svg);
     }
 }
 
@@ -126,15 +148,26 @@
             width: 100%;
         }
 
-        .skill-content .skill-row {
-            flex-direction: row;
+        .skill-content {
+            .skill-row {
+                flex-direction: row;
+                justify-content: space-between;
 
-            .skill-carousel {
-                margin-bottom: 0;
+                .skill-carousel {
+                    margin-bottom: 0;
 
-                .carousel-container .faded {
-                    transform: translateX(-50%) scale(0.6);
+                    .carousel-name {
+                        margin-bottom: 2rem;
+                    }
+
+                    .carousel-container .faded {
+                        transform: translateX(-50%) scale(0.6);
+                    }
                 }
+            }
+
+            .center {
+                justify-content: center;
             }
         }
     }
