@@ -18,5 +18,5 @@ export const showElements = (id: string, setter: (val: boolean) => void) => {
  * @returns {string} - the slug
  */
 export const toSlug = (name: string) => {
-    return name.replace(/\s/g, "").replace(/\//g, "+").toLowerCase();
+    return name.replace(/[.\s]/g, "").replace(/\//g, "+").toLowerCase();
 };

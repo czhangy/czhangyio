@@ -28,27 +28,27 @@ const SkillCarousel: React.FC<Props> = (props: Props) => {
     // Calculate hidden indices
     const isHidden = (i: number) => {
         return (
-            Math.abs(positions[i] - 250) > Math.floor(props.viewport / 2) * 140
+            Math.abs(positions[i] - 250) > Math.floor(props.viewport / 2) * 120
         );
     };
 
-    // Calculate new carousel element positions
+    // Calculate new carousel element positions on nav + render
     useEffect(() => {
         let newArr: any[] = [];
         const half: number = Math.floor(props.skills.length / 2);
         for (let i = 0; i < props.skills.length; i++) {
             const di = i - half;
-            newArr[i] = di * 140 + 250;
+            newArr[i] = di * 120 + 250;
         }
         newArr = newArr
             .slice(half - index)
             .concat(newArr.slice(0, half - index));
         setPositions(newArr);
-    }, [index]);
+    }, [index, props.skills]);
 
     // Calculate carousel nav displacement based on viewport size
     useEffect(() => {
-        setDisplacement(-140 * (Math.floor(props.viewport / 2) - 1) + 20);
+        setDisplacement(-120 * (Math.floor(props.viewport / 2) - 1) + 50);
     }, [props.viewport]);
 
     return (

@@ -9,37 +9,28 @@ import SeeMore from "@/components/Home/SeeMore";
 import { showElements } from "@/utils/helpers";
 // Local component
 import SkillCarousel from "./components/SkillCarousel";
+// TS
+import Skill from "@/models/Skill";
 
-const MySkills: React.FC = () => {
+type Props = {
+    skills: Skill[];
+};
+
+const MySkills: React.FC<Props> = ({ skills }: Props) => {
     // Hook => check screen size
     const isDesktop = useMediaQuery({ query: `(min-width: 1023px)` });
 
+    // Constants
+    const smallViewport = 3;
+    const largeViewport = 5;
+
     // Component state
     const [show, setShow] = useState<boolean>(false);
-
-    // Constant
-    const skillMap: { [key: string]: string[] } = {
-        Languages: ["C++", "HTML/CSS", "JavaScript", "SASS", "TypeScript"],
-        "Full-Stack Development": [
-            "ExpressJS",
-            "NextJS",
-            "NodeJS",
-            "ReactJS",
-            "VueJS",
-        ],
-        "Software Tools": [
-            "Git",
-            "Heroku",
-            "Jest",
-            "Jira",
-            "MongoDB",
-            "MySQL",
-            "Prisma",
-            "Testing Library",
-            "UNIX",
-            "Vercel",
-        ],
-    };
+    const [mainViewportSize, setMainViewportSize] =
+        useState<number>(smallViewport);
+    const [languageNames, setLanguageNames] = useState<string[]>([]);
+    const [fullStackNames, setFullStackNames] = useState<string[]>([]);
+    const [otherNames, setOtherNames] = useState<string[]>([]);
 
     // Init scroll listener to watch scroll into view
     useEffect(() => {
@@ -52,6 +43,31 @@ const MySkills: React.FC = () => {
             );
         };
     }, []);
+
+    // Separate skills into different categories
+    useEffect(() => {
+        if (skills) {
+            // Separate
+            const languageSkills = skills.filter(
+                (skill) => skill.category === "language"
+            );
+            const fullStackSkills = skills.filter(
+                (skill) => skill.category === "full-stack"
+            );
+            const otherSkills = skills.filter(
+                (skill) => skill.category === null
+            );
+            // Get names
+            setLanguageNames(languageSkills.map((skill) => skill.name));
+            setFullStackNames(fullStackSkills.map((skill) => skill.name));
+            setOtherNames(otherSkills.map((skill) => skill.name));
+        }
+    }, [skills]);
+
+    // Change main viewport size based on screen width
+    useEffect(() => {
+        setMainViewportSize(isDesktop ? largeViewport : smallViewport);
+    }, [isDesktop]);
 
     return (
         <div className={styles["my-skills"]}>
@@ -71,20 +87,20 @@ const MySkills: React.FC = () => {
                 <div className={styles["skill-row"]}>
                     <SkillCarousel
                         groupName="Languages"
-                        skills={skillMap["Languages"]}
-                        viewport={3}
+                        skills={languageNames}
+                        viewport={smallViewport}
                     />
                     <SkillCarousel
                         groupName="Full-Stack Development"
-                        skills={skillMap["Full-Stack Development"]}
-                        viewport={3}
+                        skills={fullStackNames}
+                        viewport={smallViewport}
                     />
                 </div>
                 <div className={`${styles["skill-row"]} ${styles.center}`}>
                     <SkillCarousel
                         groupName="Software Tools"
-                        skills={skillMap["Software Tools"]}
-                        viewport={isDesktop ? 5 : 3}
+                        skills={otherNames}
+                        viewport={mainViewportSize}
                     />
                 </div>
             </div>

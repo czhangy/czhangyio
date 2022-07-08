@@ -12,15 +12,20 @@ datasource db {
 
 model Skill {
     id          String    @id @default(cuid())
+    accentHex   String   
+    category    String?
+    mainHex     String    
     name        String
     projects    Project[]
-    category    String?
     proficiency Int
 }
 
 model Project {
     id        String  @id @default(cuid())
+    gitLink   String?
+    link      String
     name      String  @unique
     tags      Skill[]
-    thumbnail String
+    thumbnail String?
+    timestamp DateTime
 }

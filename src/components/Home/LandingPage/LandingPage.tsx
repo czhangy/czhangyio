@@ -20,7 +20,6 @@ const LandingPage: React.FC = () => {
                     alt="Headshot"
                     layout="fill"
                     objectFit="contain"
-                    priority={true}
                 />
             </div>
             <h2
