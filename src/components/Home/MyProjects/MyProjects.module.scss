@@ -14,25 +14,74 @@
         font-size: 3rem;
         letter-spacing: 2px;
         margin-bottom: 2rem;
-        padding: 0 4rem;
+        padding: 0 2rem;
         transform: translateY(-30px);
         transition: constants.$fade-in;
     }
 
     .project-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        height: 400px;
+        justify-content: space-around;
+        margin-bottom: 2rem;
+        overflow-y: hidden;
+        transform: translateY(30px);
+        transition: constants.$fade-in;
         width: 100%;
 
         .project-card {
+            align-items: center;
+            background-size: contain;
             border: 3px solid var(--accent-color);
             border-radius: 10px;
+            display: flex;
+            flex-basis: 400px;
+            flex-direction: column;
             height: 400px;
+            justify-content: center;
             margin-bottom: 2rem;
             padding: 1rem;
-            width: 100%;
 
             .project-name {
+                color: white;
+                font-family: constants.$header-font;
+                font-size: 2rem;
+                letter-spacing: 1px;
+                text-align: center;
+            }
+
+            hr {
+                background: white;
+                height: 2px;
+                margin: 0.5rem 0;
+                transition: margin 0.2s ease;
+                width: 90%;
+            }
+
+            .project-tags {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0.25rem;
+                justify-content: center;
+                width: 90%;
+
+                .project-tag {
+                    color: white;
+                    font-family: constants.$main-font;
+                    font-weight: bold;
+                    padding: 0.25rem 0.5rem;
+                    text-shadow: 1px 1px #000000;
+                }
             }
         }
+    }
+}
+
+@media (hover: hover) {
+    .my-projects .project-container .project-card:hover hr {
+        margin: 1rem 0;
     }
 }
 
@@ -54,10 +103,7 @@
         .project-container {
             display: flex;
             justify-content: space-between;
-
-            .project-card {
-                width: 48%;
-            }
+            transform: translate(-30px, 0);
         }
     }
 }

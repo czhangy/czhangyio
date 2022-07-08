@@ -26,6 +26,5 @@ model Project {
     link      String
     name      String  @unique
     tags      Skill[]
-    thumbnail String?
-    timestamp DateTime
+    timestamp DateTime @default(now())
 }

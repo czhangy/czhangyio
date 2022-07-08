@@ -10,8 +10,8 @@ import styles from "@/styles/pages/Home.module.scss";
 // Local components
 import LandingPage from "@/components/Home/LandingPage/LandingPage";
 import AboutMe from "@/components/Home/AboutMe/AboutMe";
-import MySkills from "@/components/Home/MySkills/MySkills";
 import MyProjects from "@/components/Home/MyProjects/MyProjects";
+import MySkills from "@/components/Home/MySkills/MySkills";
 // Prisma
 import prisma from "@/lib/prisma";
 
@@ -28,8 +28,8 @@ const Home: NextPage<Props> = ({ projects, skills }: Props) => {
             </Head>
             <LandingPage />
             <AboutMe />
-            <MySkills skills={skills} />
             <MyProjects projects={projects} />
+            <MySkills skills={skills} />
         </div>
     );
 };
@@ -39,8 +39,12 @@ export async function getStaticProps() {
     try {
         const projectsPromise: PrismaPromise<Project[]> =
             prisma.project.findMany({
-                take: 2,
-                include: {
+                take: 3,
+                select: {
+                    id: true,
+                    gitLink: true,
+                    link: true,
+                    name: true,
                     tags: true,
                 },
                 orderBy: {

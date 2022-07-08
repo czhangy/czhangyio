@@ -7,6 +7,4 @@ export default interface Project {
     link: string;
     name: string;
     tags?: Skill[];
-    thumbnail: string | null;
-    timestamp: Date;
 }
