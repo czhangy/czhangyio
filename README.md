@@ -177,11 +177,10 @@ npm run dev
 
 -   [ ] Build main page
 
-    -   [ ] Landing page
-    -   [ ] About me
-    -   [ ] Skills carousel
+    -   [x] Landing page
+    -   [x] About me
+    -   [x] Skills carousel
     -   [ ] Projects carousel
-    -   [ ] Contact info
     -   [ ] Smooth animations with scroll
 
 -   [ ] Build about page

@@ -1,5 +1,5 @@
 // Stylesheet
-import styles from "@/styles/Nav/Navbar.module.scss";
+import styles from "./Navbar.module.scss";
 // Next
 import Link from "next/link";
 // Local components
@@ -32,16 +32,20 @@ const Navbar: React.FC = () => {
     }, []);
 
     return (
-        <nav id={styles.navbar}>
-            <Link href="/">
-                <a id={styles["title-link"]}>Charles Zhang</a>
-            </Link>
-            <div id={styles["site-options"]}>
-                <ThemeToggle />
-                <MenuButton onClick={toggleMenu} onClose={closeMenu} />
-            </div>
-            {menuOpen ? <NavMenu /> : ""}
-        </nav>
+        <div className={styles.navbar}>
+            <nav className={styles["navbar-container"]}>
+                <Link href="/">
+                    <a>
+                        <h1 className={styles["title-link"]}>Charles Zhang</h1>
+                    </a>
+                </Link>
+                <div className={styles["site-options"]}>
+                    <ThemeToggle />
+                    <MenuButton onClick={toggleMenu} onClose={closeMenu} />
+                </div>
+                <NavMenu open={menuOpen} />
+            </nav>
+        </div>
     );
 };
 

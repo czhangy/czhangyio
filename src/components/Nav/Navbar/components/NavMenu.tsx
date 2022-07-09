@@ -1,12 +1,21 @@
 // Stylesheet
-import styles from "@/styles/Nav/Navbar.module.scss";
+import styles from "../Navbar.module.scss";
 // Next
 import Link from "next/link";
 import Image from "next/image";
 
-const NavMenu: React.FC = () => {
+type Props = {
+    open: boolean;
+};
+
+const NavMenu: React.FC<Props> = ({ open }: Props) => {
     return (
-        <ul id={styles["nav-menu"]}>
+        <ul
+            className={`${styles["nav-menu"]} ${
+                open ? styles.open : styles.closed
+            }`}
+            style={{ opacity: open ? 1 : 0 }}
+        >
             <li>
                 <Link href="/skills">
                     <a className={styles["nav-link"]}>

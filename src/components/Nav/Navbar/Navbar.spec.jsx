@@ -1,5 +1,5 @@
 // Component
-import Navbar from "@/components/Nav/Navbar/Navbar";
+import Navbar from "./Navbar";
 // Libraries
 import "@testing-library/jest-dom";
 import { act, fireEvent, render, screen } from "@testing-library/react";
@@ -7,7 +7,7 @@ import { act, fireEvent, render, screen } from "@testing-library/react";
 describe("<Navbar />", () => {
     beforeEach(() => render(<Navbar />));
     it("Renders the site title", () => {
-        const siteTitle = screen.queryByText("Charles Zhang");
+        const siteTitle = screen.queryByText("Charles Zhang").closest("a");
         expect(siteTitle).toBeInTheDocument();
         expect(siteTitle).toHaveAttribute("href", "/");
     });
@@ -17,7 +17,7 @@ describe("<Navbar />", () => {
         expect(buttons[1]).toBeInTheDocument();
     });
     it("Initializes with the nav menu closed", () => {
-        expect(screen.queryByRole("list")).not.toBeInTheDocument();
+        expect(screen.queryByRole("list")).not.toBeVisible();
     });
     it("Initializes in dark mode", () => {
         expect(document.body.dataset.theme).toEqual("dark");
@@ -34,9 +34,9 @@ describe("<Navbar />", () => {
     it("Toggles the nav menu on button click", () => {
         const menuButton = screen.getAllByRole("button")[1];
         act(() => fireEvent.click(menuButton));
-        expect(screen.queryByRole("list")).toBeInTheDocument();
+        expect(screen.queryByRole("list")).toBeVisible();
         act(() => fireEvent.click(menuButton));
-        expect(screen.queryByRole("list")).not.toBeInTheDocument();
+        expect(screen.queryByRole("list")).not.toBeVisible();
     });
     it("Nav menu contains links to all pages", () => {
         act(() => fireEvent.click(screen.getAllByRole("button")[1]));
@@ -55,6 +55,6 @@ describe("<Navbar />", () => {
         act(() => fireEvent.click(menuButton));
         act(() => fireEvent.blur(menuButton));
         await act(async () => await new Promise((r) => setTimeout(r, 150)));
-        expect(screen.queryByRole("list")).not.toBeInTheDocument();
+        expect(screen.queryByRole("list")).not.toBeVisible();
     });
 });

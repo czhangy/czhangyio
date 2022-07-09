@@ -10,16 +10,31 @@ datasource db {
     url      = env("DATABASE_URL")
 }
 
-model Skill {
-    id       String    @id @default(cuid())
-    name     String
-    projects Project[]
-    icon     String
+model Experience {
+    id        String   @id @default(cuid())
+    endDate   String
+    jobTitle  String
+    name      String
+    points    String[]
+    startDate String
+    timestamp DateTime @default(now())
 }
 
 model Project {
-    id        String  @id @default(cuid())
-    name      String  @unique
+    id        String   @id @default(cuid())
+    gitLink   String?
+    link      String
+    name      String   @unique
     tags      Skill[]
-    thumbnail String
+    timestamp DateTime @default(now())
+}
+
+model Skill {
+    id          String    @id @default(cuid())
+    accentHex   String
+    category    String?
+    mainHex     String
+    name        String
+    projects    Project[]
+    proficiency Int
 }

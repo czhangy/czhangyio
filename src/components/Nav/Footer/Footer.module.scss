@@ -1,31 +1,31 @@
 @use "@/styles/constants";
 
-#footer {
-    width: 100%;
+.footer {
+    align-items: center;
     border-top: 2px solid var(--accent-color);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    padding: 1.5rem 2rem;
+    padding: 1.5rem constants.$x-padding;
+    width: 100%;
 
-    #footer-text {
+    .footer-text {
         font-family: constants.$header-font;
         font-size: 1.5rem;
         letter-spacing: 1px;
         margin-bottom: 1rem;
     }
 
-    #footer-icons {
-        display: flex;
+    .footer-icons {
         align-items: center;
+        display: flex;
 
         .footer-icon {
-            height: 2rem;
-            width: 2rem;
-            position: relative;
             filter: var(--accent-color-svg);
+            height: 2rem;
             margin-right: 2rem;
+            position: relative;
+            width: 2rem;
 
             &:last-child {
                 margin-right: 0;
@@ -35,7 +35,7 @@
 }
 
 @media (hover: hover) {
-    #footer > #footer-icons > .footer-icon:hover {
+    .footer .footer-icons .footer-icon:hover {
         filter: var(--emph-color-svg);
     }
 }
