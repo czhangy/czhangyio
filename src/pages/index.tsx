@@ -1,5 +1,6 @@
 // TS
 import type { NextPage } from "next";
+import Experience from "@/models/Experience";
 import Project from "@/models/Project";
 import Skill from "@/models/Skill";
 import { PrismaPromise } from "@prisma/client";
@@ -10,17 +11,19 @@ import styles from "@/styles/pages/Home.module.scss";
 // Local components
 import LandingPage from "@/components/Home/LandingPage/LandingPage";
 import AboutMe from "@/components/Home/AboutMe/AboutMe";
+import MyExperience from "@/components/Home/MyExperience/MyExperience";
 import MyProjects from "@/components/Home/MyProjects/MyProjects";
 import MySkills from "@/components/Home/MySkills/MySkills";
 // Prisma
 import prisma from "@/lib/prisma";
 
 type Props = {
+    experience: Experience;
     projects: Project[];
     skills: Skill[];
 };
 
-const Home: NextPage<Props> = ({ projects, skills }: Props) => {
+const Home: NextPage<Props> = ({ experience, projects, skills }: Props) => {
     return (
         <div id={styles.home}>
             <Head>
@@ -28,6 +31,7 @@ const Home: NextPage<Props> = ({ projects, skills }: Props) => {
             </Head>
             <LandingPage />
             <AboutMe />
+            <MyExperience experience={experience} />
             <MyProjects projects={projects} />
             <MySkills skills={skills} />
         </div>
@@ -37,6 +41,20 @@ const Home: NextPage<Props> = ({ projects, skills }: Props) => {
 // Fetch projects from DB
 export async function getStaticProps() {
     try {
+        const experiencePromise: PrismaPromise<Experience | null> =
+            prisma.experience.findFirst({
+                select: {
+                    id: true,
+                    endDate: true,
+                    jobTitle: true,
+                    name: true,
+                    points: true,
+                    startDate: true,
+                },
+                orderBy: {
+                    timestamp: "desc",
+                },
+            });
         const projectsPromise: PrismaPromise<Project[]> =
             prisma.project.findMany({
                 take: 3,
@@ -62,12 +80,13 @@ export async function getStaticProps() {
             },
         });
         // Await repsonses
-        const [projects, skills] = await Promise.all([
+        const [experience, projects, skills] = await Promise.all([
+            experiencePromise,
             projectsPromise,
             skillsPromise,
         ]);
         return {
-            props: { projects, skills },
+            props: { experience, projects, skills },
         };
     } catch (err) {
         console.log(err);

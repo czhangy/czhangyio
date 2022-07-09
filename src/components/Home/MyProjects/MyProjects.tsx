@@ -2,7 +2,6 @@
 import styles from "./MyProjects.module.scss";
 // React
 import { useEffect, useState } from "react";
-import { useMediaQuery } from "react-responsive";
 // Helper function
 import { showElements } from "@/utils/helpers";
 // Home component

@@ -20,7 +20,7 @@ const ProjectCard: React.FC<Props> = ({ project }: Props) => {
             <a
                 className={styles["project-card"]}
                 style={{
-                    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/assets/${toSlug(
+                    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/assets/projects/${toSlug(
                         project.name
                     )}/thumbnail.jpeg')`,
                 }}

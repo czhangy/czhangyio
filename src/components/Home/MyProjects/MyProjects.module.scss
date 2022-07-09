@@ -33,11 +33,11 @@
 
         .project-card {
             align-items: center;
-            background-size: contain;
+            background-size: cover;
             border: 3px solid var(--accent-color);
             border-radius: 10px;
             display: flex;
-            flex-basis: 400px;
+            flex: 1 1 400px;
             flex-direction: column;
             height: 400px;
             justify-content: center;
@@ -72,7 +72,7 @@
                     font-family: constants.$main-font;
                     font-weight: bold;
                     padding: 0.25rem 0.5rem;
-                    text-shadow: 1px 1px #000000;
+                    text-shadow: 1px 1px #666666;
                 }
             }
         }

@@ -24,7 +24,7 @@ const SkillButton: React.FC<Props> = (props: Props) => {
         >
             <div className={styles["skill-icon"]}>
                 <Image
-                    src={`/assets/images/${toSlug(props.skillName)}.webp`}
+                    src={`/assets/skills/${toSlug(props.skillName)}.webp`}
                     alt={props.skillName}
                     layout="fill"
                     objectFit="contain"

@@ -1,6 +1,3 @@
-// TS
-import Project from "./Project";
-
 export default interface Skill {
     id: string;
     accentHex: string;

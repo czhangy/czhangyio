@@ -107,10 +107,7 @@
                     }
 
                     .carousel-nav {
-                        filter: var(--accent-color-svg);
-                        height: 2rem;
-                        position: absolute;
-                        width: 1.5rem;
+                        display: none;
                     }
 
                     .left {
@@ -168,5 +165,20 @@
                 justify-content: center;
             }
         }
+    }
+}
+
+@media screen and (min-width: constants.$mobile) {
+    .my-skills
+        .skill-content
+        .skill-row
+        .skill-carousel
+        .carousel-container
+        .carousel-nav {
+        display: block;
+        filter: var(--accent-color-svg);
+        height: 2rem;
+        position: absolute;
+        width: 1.5rem;
     }
 }
