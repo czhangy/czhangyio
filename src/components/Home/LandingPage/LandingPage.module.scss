@@ -21,10 +21,16 @@
 
     .landing-text {
         font-family: constants.$header-font;
-        font-size: 3rem;
+        font-size: 2.5rem;
         letter-spacing: 2px;
         margin-top: 2rem;
         transform: translateY(30px);
         transition: constants.$fade-in;
+    }
+}
+
+@media screen and (min-width: constants.$mobile) {
+    .landing-page .landing-text {
+        font-size: 3rem;
     }
 }
