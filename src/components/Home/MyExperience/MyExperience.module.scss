@@ -11,7 +11,7 @@
         border-bottom: 5px solid var(--accent-color);
         color: var(--accent-color);
         font-family: constants.$header-font;
-        font-size: 3rem;
+        font-size: 2.5rem;
         letter-spacing: 2px;
         margin-bottom: 2rem;
         padding: 0 1rem;
@@ -108,46 +108,52 @@
 }
 
 @media screen and (min-width: constants.$mobile) {
-    .my-experience .experience-card {
-        .card-header {
-            align-items: center;
-            border: none;
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 3rem;
-            padding: 0;
+    .my-experience {
+        .experience-header {
+            font-size: 3rem;
+        }
 
-            .job {
+        .experience-card {
+            .card-header {
                 align-items: center;
+                border: none;
                 display: flex;
+                justify-content: space-between;
+                margin-bottom: 3rem;
+                padding: 0;
 
-                .job-info {
-                    text-align: left;
+                .job {
+                    align-items: center;
+                    display: flex;
 
-                    .name {
-                        font-size: 2.5rem;
-                        letter-spacing: 1px;
+                    .job-info {
+                        text-align: left;
+
+                        .name {
+                            font-size: 2.5rem;
+                            letter-spacing: 1px;
+                        }
+
+                        .title {
+                            font-size: 2rem;
+                        }
                     }
+                }
 
-                    .title {
-                        font-size: 2rem;
-                    }
+                .dates {
+                    display: block;
+                    font-family: constants.$main-font;
+                    font-size: 1.5rem;
                 }
             }
 
-            .dates {
-                display: block;
-                font-family: constants.$main-font;
-                font-size: 1.5rem;
-            }
-        }
+            .points {
+                padding: 0 2rem;
 
-        .points {
-            padding: 0 2rem;
-
-            .point {
-                font-size: 1.5rem;
-                margin-bottom: 1.5rem;
+                .point {
+                    font-size: 1.5rem;
+                    margin-bottom: 1.5rem;
+                }
             }
         }
     }
