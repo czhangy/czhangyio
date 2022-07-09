@@ -52,7 +52,7 @@
 
 ### Summary
 
-This is my personal portfolio, which I'm using as a platform to introduce myself, my skills, and my projects. This project is currently under development and is currently in the planning stage.
+This is my personal portfolio, which I'm using as a platform to introduce myself, my experience, my skills, and my projects. This project is currently under development.
 
 The most up-to-date version of my portfolio is currently deployed at: https://czhangy.io.
 
@@ -175,13 +175,14 @@ npm run dev
     -   [x] Light mode toggle
     -   [x] Social links in footer
 
--   [ ] Build main page
+-   [x] Build main page
 
     -   [x] Landing page
-    -   [x] About me
-    -   [x] Skills carousel
-    -   [ ] Projects carousel
-    -   [ ] Smooth animations with scroll
+    -   [x] About me section
+    -   [x] Experience section
+    -   [x] Skills section
+    -   [x] Projects section
+    -   [x] Smooth animations with scroll
 
 -   [ ] Build about page
 
@@ -189,9 +190,14 @@ npm run dev
     -   [ ] About experience
     -   [ ] About hobbies
 
+-   [ ] Build experience page
+
+    -   [ ] List of all jobs
+
 -   [ ] Build skills page
 
     -   [ ] Sections for skill types
+    -   [ ] Animated bars for proficiency rating
 
 -   [ ] Build projects page
 
