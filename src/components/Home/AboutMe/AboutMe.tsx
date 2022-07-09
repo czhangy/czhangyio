@@ -54,16 +54,17 @@ const AboutMe: React.FC = () => {
                     }`}
                     data-testid="about-paragraph"
                 >
-                    Hey! I'm Charles and I'm a fourth-year Computer Science
-                    major studying at UCLA. I'm primarily experienced in
-                    full-stack development, but I'm open to exploring whatever
-                    facets of CS are available to me. I'm currently working as a
-                    SWE intern with the COAF Refinance team at Capital One for
-                    this summer, working in full-stack development and machine
-                    learning. As I move on in my career, I look forward to
-                    continuing to discover ways that computer science can help
-                    make the world a better place, and hope to put myself in a
-                    position to be a part of that change.
+                    Hey! I&apos;m Charles and I&apos;m a fourth-year Computer
+                    Science major studying at UCLA. I&apos;m primarily
+                    experienced in full-stack development, but I&apos;m open to
+                    exploring whatever facets of CS are available to me.
+                    I&apos;m currently working as a SWE intern with the COAF
+                    Refinance team at Capital One for this summer, working in
+                    full-stack development and machine learning. As I move on in
+                    my career, I look forward to continuing to discover ways
+                    that computer science can help make the world a better
+                    place, and hope to put myself in a position to be a part of
+                    that change.
                 </p>
             </div>
             <SeeMore show={show} url="about" />
