@@ -1,5 +1,5 @@
 // Component
-import Footer from "./Footer";
+import Footer from "@/components/Nav/Footer/Footer";
 // Libraries
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";

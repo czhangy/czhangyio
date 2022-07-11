@@ -4,8 +4,6 @@ import styles from "./AboutMe.module.scss";
 import Image from "next/image";
 // React
 import { useEffect, useState } from "react";
-// Home component
-import SeeMore from "@/components/Home/SeeMore";
 // Helper function
 import { showElements } from "@/utils/helpers";
 
@@ -67,7 +65,6 @@ const AboutMe: React.FC = () => {
                     that change.
                 </p>
             </div>
-            <SeeMore show={show} url="about" />
         </div>
     );
 };

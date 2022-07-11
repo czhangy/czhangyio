@@ -175,14 +175,11 @@ npm run dev
     -   [x] Light mode toggle
     -   [x] Social links in footer
 
--   [x] Build main page
+-   [x] Build home page
 
-    -   [x] Landing page
-    -   [x] About me section
-    -   [x] Experience section
-    -   [x] Skills section
-    -   [x] Projects section
-    -   [x] Smooth animations with scroll
+    -   [x] Headshot
+    -   [x] Landing page text
+    -   [ ] Nav to other pages
 
 -   [ ] Build about page
 
@@ -192,17 +189,18 @@ npm run dev
 
 -   [ ] Build experience page
 
-    -   [ ] List of all jobs
-
--   [ ] Build skills page
-
-    -   [ ] Sections for skill types
-    -   [ ] Animated bars for proficiency rating
+    -   [ ] Timeline of all jobs
+    -   [ ] Job bullets + description
 
 -   [ ] Build projects page
 
     -   [ ] Links to individual projects
     -   [ ] Grid with project cards
+
+-   [ ] Build skills page
+
+    -   [ ] Sections for skill types
+    -   [ ] Animated bars for proficiency rating
 
 -   [ ] Build project cards
 

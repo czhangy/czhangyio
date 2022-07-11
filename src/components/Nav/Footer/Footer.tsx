@@ -1,5 +1,5 @@
 // Stylesheet
-import styles from "./Footer.module.scss";
+import styles from "@/styles/Nav/Footer.module.scss";
 // Next
 import Image from "next/image";
 import Link from "next/link";

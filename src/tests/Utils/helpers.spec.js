@@ -1,5 +1,5 @@
 // Function
-import { toSlug } from "./helpers";
+import { toSlug } from "@/utils/helpers";
 
 describe("utils/helpers", () => {
     it("toSlug works", () => {

@@ -1,99 +1,53 @@
 // TS
 import type { NextPage } from "next";
-import Experience from "@/models/Experience";
-import Project from "@/models/Project";
-import Skill from "@/models/Skill";
-import { PrismaPromise } from "@prisma/client";
 // Next
 import Head from "next/head";
+import Image from "next/image";
+import Link from "next/link";
 // Stylesheet
-import styles from "@/styles/pages/Home.module.scss";
-// Local components
-import LandingPage from "@/components/Home/LandingPage/LandingPage";
-import AboutMe from "@/components/Home/AboutMe/AboutMe";
-import MyExperience from "@/components/Home/MyExperience/MyExperience";
-import MyProjects from "@/components/Home/MyProjects/MyProjects";
-import MySkills from "@/components/Home/MySkills/MySkills";
-// Prisma
-import prisma from "@/lib/prisma";
+import styles from "@/styles/Home/Home.module.scss";
+// React
+import { useEffect, useState } from "react";
 
-type Props = {
-    experience: Experience;
-    projects: Project[];
-    skills: Skill[];
-};
+const Home: NextPage = () => {
+    // Component state
+    const [show, setShow] = useState<boolean>(false);
 
-const Home: NextPage<Props> = ({ experience, projects, skills }: Props) => {
+    // Animate page elements on mount
+    useEffect(() => setShow(true), []);
+
     return (
         <div id={styles.home}>
             <Head>
                 <title>Charles Zhang&apos;s Portfolio</title>
             </Head>
-            <LandingPage />
-            <AboutMe />
-            <MyExperience experience={experience} />
-            <MyProjects projects={projects} />
-            <MySkills skills={skills} />
+            <div className={`${styles.headshot} ${show ? "show" : "from-top"}`}>
+                <Image
+                    src="/assets/images/headshot.webp"
+                    alt="Headshot"
+                    layout="fill"
+                    objectFit="contain"
+                />
+            </div>
+            <h2 className={show ? "show" : "from-bottom"}>
+                Hi, I&apos;m Charles.
+            </h2>
+            <nav>
+                <Link href="/about">
+                    <a className={show ? "show" : "from-bottom"}>About</a>
+                </Link>
+                <Link href="/experience">
+                    <a className={show ? "show" : "from-bottom"}>Experience</a>
+                </Link>
+                <Link href="/projects">
+                    <a className={show ? "show" : "from-bottom"}>Projects</a>
+                </Link>
+                <Link href="/skills">
+                    <a className={show ? "show" : "from-bottom"}>Skills</a>
+                </Link>
+            </nav>
         </div>
     );
 };
-
-// Fetch projects from DB
-export async function getStaticProps() {
-    try {
-        const experiencePromise: PrismaPromise<Experience | null> =
-            prisma.experience.findFirst({
-                select: {
-                    id: true,
-                    endDate: true,
-                    jobTitle: true,
-                    name: true,
-                    points: true,
-                    startDate: true,
-                },
-                orderBy: {
-                    timestamp: "desc",
-                },
-            });
-        const projectsPromise: PrismaPromise<Project[]> =
-            prisma.project.findMany({
-                take: 3,
-                select: {
-                    id: true,
-                    gitLink: true,
-                    link: true,
-                    name: true,
-                    tags: true,
-                },
-                orderBy: {
-                    timestamp: "desc",
-                },
-            });
-        const skillsPromise: PrismaPromise<Skill[]> = prisma.skill.findMany({
-            where: {
-                proficiency: {
-                    gt: 0,
-                },
-            },
-            orderBy: {
-                name: "asc",
-            },
-        });
-        // Await repsonses
-        const [experience, projects, skills] = await Promise.all([
-            experiencePromise,
-            projectsPromise,
-            skillsPromise,
-        ]);
-        return {
-            props: { experience, projects, skills },
-        };
-    } catch (err) {
-        console.log(err);
-        return {
-            props: {},
-        };
-    }
-}
 
 export default Home;

@@ -18,13 +18,30 @@
     }
 }
 
-.hide {
+.from-top {
     opacity: 0;
+    transform: translateY(-30px);
+}
+
+.from-bottom {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.from-left {
+    opacity: 0;
+    transform: translateX(-30px);
+}
+
+.from-right {
+    opacity: 0;
+    transform: translateX(30px);
 }
 
 .show {
     opacity: 1;
     transform: translate(0, 0) !important;
+    transition: constants.$fade-in;
 }
 
 * {
