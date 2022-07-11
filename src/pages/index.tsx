@@ -33,18 +33,26 @@ const Home: NextPage = () => {
                 Hi, I&apos;m Charles.
             </h2>
             <nav>
-                <Link href="/about">
-                    <a className={show ? "show" : "from-bottom"}>About</a>
-                </Link>
-                <Link href="/experience">
-                    <a className={show ? "show" : "from-bottom"}>Experience</a>
-                </Link>
-                <Link href="/projects">
-                    <a className={show ? "show" : "from-bottom"}>Projects</a>
-                </Link>
-                <Link href="/skills">
-                    <a className={show ? "show" : "from-bottom"}>Skills</a>
-                </Link>
+                <div>
+                    <Link href="/about">
+                        <a className={show ? "show" : "from-bottom"}>About</a>
+                    </Link>
+                    <Link href="/experience">
+                        <a className={show ? "show" : "from-bottom"}>
+                            Experience
+                        </a>
+                    </Link>
+                </div>
+                <div>
+                    <Link href="/projects">
+                        <a className={show ? "show" : "from-bottom"}>
+                            Projects
+                        </a>
+                    </Link>
+                    <Link href="/skills">
+                        <a className={show ? "show" : "from-bottom"}>Skills</a>
+                    </Link>
+                </div>
             </nav>
         </div>
     );
