@@ -179,7 +179,7 @@ npm run dev
 
     -   [x] Headshot
     -   [x] Landing page text
-    -   [ ] Nav to other pages
+    -   [x] Nav to other pages
 
 -   [ ] Build about page
 
