@@ -17,17 +17,32 @@ const NavMenu: React.FC<Props> = ({ open }: Props) => {
             style={{ opacity: open ? 1 : 0 }}
         >
             <li>
-                <Link href="/skills">
+                <Link href="/about">
                     <a className={styles["nav-link"]}>
                         <div className={styles["link-icon"]}>
                             <Image
-                                src="/assets/icons/skills.svg"
+                                src="/assets/icons/about.svg"
                                 alt=""
                                 layout="fill"
                                 objectFit="contain"
                             />
                         </div>
-                        <p className={styles["link-text"]}>Skills</p>
+                        <p className={styles["link-text"]}>About</p>
+                    </a>
+                </Link>
+            </li>
+            <li>
+                <Link href="/experience">
+                    <a className={styles["nav-link"]}>
+                        <div className={styles["link-icon"]}>
+                            <Image
+                                src="/assets/icons/experience.svg"
+                                alt=""
+                                layout="fill"
+                                objectFit="contain"
+                            />
+                        </div>
+                        <p className={styles["link-text"]}>Experience</p>
                     </a>
                 </Link>
             </li>
@@ -47,17 +62,17 @@ const NavMenu: React.FC<Props> = ({ open }: Props) => {
                 </Link>
             </li>
             <li>
-                <Link href="/about">
+                <Link href="/skills">
                     <a className={styles["nav-link"]}>
                         <div className={styles["link-icon"]}>
                             <Image
-                                src="/assets/icons/about.svg"
+                                src="/assets/icons/skills.svg"
                                 alt=""
                                 layout="fill"
                                 objectFit="contain"
                             />
                         </div>
-                        <p className={styles["link-text"]}>About</p>
+                        <p className={styles["link-text"]}>Skills</p>
                     </a>
                 </Link>
             </li>

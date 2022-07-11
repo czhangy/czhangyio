@@ -14,4 +14,14 @@ describe("<Home />", () => {
         const text = screen.queryByText("Hi, I'm Charles.");
         expect(text).toBeInTheDocument();
     });
+    it("Renders nav links", () => {
+        const aboutLink = screen.queryByText("About");
+        const experienceLink = screen.queryByText("Experience");
+        const projectsLink = screen.queryByText("Projects");
+        const skillsLink = screen.queryByText("Skills");
+        expect(aboutLink).toHaveAttribute("href", "/about");
+        expect(experienceLink).toHaveAttribute("href", "/experience");
+        expect(projectsLink).toHaveAttribute("href", "/projects");
+        expect(skillsLink).toHaveAttribute("href", "/skills");
+    });
 });

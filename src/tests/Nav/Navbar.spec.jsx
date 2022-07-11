@@ -40,15 +40,14 @@ describe("<Navbar />", () => {
     });
     it("Nav menu contains links to all pages", () => {
         act(() => fireEvent.click(screen.getAllByRole("button")[1]));
-        const skillsLink = screen.queryByText("Skills").closest("a");
-        const projectsLink = screen.queryByText("Projects").closest("a");
         const aboutLink = screen.queryByText("About").closest("a");
-        expect(skillsLink).toBeInTheDocument();
-        expect(projectsLink).toBeInTheDocument();
-        expect(aboutLink).toBeInTheDocument();
-        expect(skillsLink).toHaveAttribute("href", "/skills");
-        expect(projectsLink).toHaveAttribute("href", "/projects");
+        const experienceLink = screen.queryByText("Experience").closest("a");
+        const projectsLink = screen.queryByText("Projects").closest("a");
+        const skillsLink = screen.queryByText("Skills").closest("a");
         expect(aboutLink).toHaveAttribute("href", "/about");
+        expect(experienceLink).toHaveAttribute("href", "/experience");
+        expect(projectsLink).toHaveAttribute("href", "/projects");
+        expect(skillsLink).toHaveAttribute("href", "/skills");
     });
     it("Nav menu closes on blur", async () => {
         const menuButton = screen.getAllByRole("button")[1];
