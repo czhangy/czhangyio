@@ -10,7 +10,7 @@
     right: 2rem;
     top: calc(constants.$navbar-height + 10px);
     transition: all 0.2s ease;
-    z-index: 999;
+    z-index: constants.$nav-menu;
 
     li {
         width: 100%;

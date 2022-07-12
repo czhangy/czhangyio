@@ -47,7 +47,7 @@
     }
 }
 
-@media screen and (min-width: constants.$mobile) {
+@media screen and (min-width: constants.$tablet) {
     .landing-text {
         font-size: 3rem;
     }

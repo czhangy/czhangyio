@@ -34,7 +34,7 @@
     }
 }
 
-@media screen and (min-width: constants.$mobile) {
+@media screen and (min-width: constants.$tablet) {
     .navbar nav h1 {
         font-size: 2rem;
     }
