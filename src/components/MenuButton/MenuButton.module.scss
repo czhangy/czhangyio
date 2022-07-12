@@ -20,11 +20,7 @@
 }
 
 @media (hover: hover) {
-    .menu-button:hover {
-        height: 1.6rem;
-
-        hr {
-            background: var(--emph-color);
-        }
+    .menu-button:hover hr {
+        background: var(--emph-color);
     }
 }
