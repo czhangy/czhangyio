@@ -181,11 +181,11 @@ npm run dev
     -   [x] Landing page text
     -   [x] Nav to other pages
 
--   [ ] Build about page
+-   [x] Build about page
 
-    -   [ ] About self
-    -   [ ] About experience
-    -   [ ] About hobbies
+    -   [x] About self
+    -   [x] About experience
+    -   [x] About hobbies
 
 -   [ ] Build experience page
 
