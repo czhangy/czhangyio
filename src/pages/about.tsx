@@ -4,10 +4,11 @@ import type { NextPage } from "next";
 import Head from "next/head";
 // Stylesheet
 import styles from "@/styles/About/About.module.scss";
+// Local components
 
 const About: NextPage = () => {
     return (
-        <div id={styles.home}>
+        <div id={styles.about}>
             <Head>
                 <title>About Me | Charles Zhang</title>
             </Head>

@@ -1,11 +1,11 @@
 // Component
-import Home from "@/pages/index";
+import HomePage from "./HomePage";
 // Libraries
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
 
-describe("<Home />", () => {
-    beforeEach(() => render(<Home />));
+describe("<HomePage />", () => {
+    beforeEach(() => render(<HomePage />));
     it("Renders headshot", () => {
         const headshot = screen.queryByAltText("Headshot");
         expect(headshot).toBeInTheDocument();
