@@ -9,10 +9,8 @@ const customJestConfig = {
     testEnvironment: "jest-environment-jsdom",
     moduleNameMapper: {
         "^@/components(.*)$": "<rootDir>/src/components/$1",
-        "^@/pages(.*)$": "<rootDir>/src/pages/$1",
-        "^@/utils(.*)$": "<rootDir>/src/utils/$1",
     },
-    coverageReporters: ["json", "text", "html", "lcov"],
+    // coverageReporters: ["json", "text", "html", "lcov"],
     // coverageThreshold: {
     //     global: {
     //         branches: 70,

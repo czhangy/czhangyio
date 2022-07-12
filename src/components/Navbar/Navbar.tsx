@@ -1,11 +1,11 @@
 // Stylesheet
-import styles from "@/styles/Nav/Navbar.module.scss";
+import styles from "./Navbar.module.scss";
 // Next
 import Link from "next/link";
 // Local components
-import MenuButton from "./components/MenuButton";
-import NavMenu from "./components/NavMenu";
-import ThemeToggle from "./components/ThemeToggle";
+import MenuButton from "@/components/MenuButton/MenuButton";
+import NavMenu from "@/components/NavMenu/NavMenu";
+import ThemeToggle from "@/components/ThemeToggle/ThemeToggle";
 // React
 import { useState, useEffect } from "react";
 // TS
@@ -36,7 +36,7 @@ const Navbar: React.FC = () => {
             <nav className={styles["navbar-container"]}>
                 <Link href="/">
                     <a>
-                        <h1 className={styles["title-link"]}>Charles Zhang</h1>
+                        <h1>Charles Zhang</h1>
                     </a>
                 </Link>
                 <div className={styles["site-options"]}>

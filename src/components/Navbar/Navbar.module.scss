@@ -1,0 +1,41 @@
+@use "@/styles/constants";
+
+.navbar {
+    border-bottom: 2px solid var(--accent-color);
+    display: flex;
+    justify-content: center;
+
+    nav {
+        align-items: center;
+        display: flex;
+        height: constants.$navbar-height;
+        justify-content: space-between;
+        max-width: constants.$max-width;
+        padding: 0 constants.$padding;
+        position: relative;
+        width: 100%;
+
+        h1 {
+            font-family: constants.$header-font;
+            font-size: 1.75rem;
+            letter-spacing: 2px;
+        }
+
+        .site-options {
+            align-items: center;
+            display: flex;
+        }
+    }
+}
+
+@media (hover: hover) {
+    .navbar nav h1:hover {
+        color: var(--emph-color);
+    }
+}
+
+@media screen and (min-width: constants.$mobile) {
+    .navbar nav h1 {
+        font-size: 2rem;
+    }
+}

@@ -1,5 +1,5 @@
 // Stylesheet
-import styles from "@/styles/Nav/Navbar.module.scss";
+import styles from "./MenuButton.module.scss";
 // TS
 import { SyntheticEvent } from "react";
 

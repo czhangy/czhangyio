@@ -2,17 +2,16 @@
 import type { NextPage } from "next";
 // Next
 import Head from "next/head";
-// Stylesheet
-import styles from "@/styles/About/About.module.scss";
-// Local components
+// Component
+import AboutPage from "@/components/AboutPage/AboutPage";
 
 const About: NextPage = () => {
     return (
-        <div id={styles.about}>
+        <div id="about">
             <Head>
                 <title>About Me | Charles Zhang</title>
             </Head>
-            About Me
+            <AboutPage />
         </div>
     );
 };

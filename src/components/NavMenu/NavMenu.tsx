@@ -1,5 +1,5 @@
 // Stylesheet
-import styles from "@/styles/Nav/Navbar.module.scss";
+import styles from "./NavMenu.module.scss";
 // Next
 import Link from "next/link";
 import Image from "next/image";
@@ -18,7 +18,7 @@ const NavMenu: React.FC<Props> = ({ open }: Props) => {
         >
             <li>
                 <Link href="/about">
-                    <a className={styles["nav-link"]}>
+                    <a>
                         <div className={styles["link-icon"]}>
                             <Image
                                 src="/assets/icons/about.svg"
@@ -27,13 +27,13 @@ const NavMenu: React.FC<Props> = ({ open }: Props) => {
                                 objectFit="contain"
                             />
                         </div>
-                        <p className={styles["link-text"]}>About</p>
+                        <p>About</p>
                     </a>
                 </Link>
             </li>
             <li>
                 <Link href="/experience">
-                    <a className={styles["nav-link"]}>
+                    <a>
                         <div className={styles["link-icon"]}>
                             <Image
                                 src="/assets/icons/experience.svg"
@@ -42,13 +42,13 @@ const NavMenu: React.FC<Props> = ({ open }: Props) => {
                                 objectFit="contain"
                             />
                         </div>
-                        <p className={styles["link-text"]}>Experience</p>
+                        <p>Experience</p>
                     </a>
                 </Link>
             </li>
             <li>
                 <Link href="/projects">
-                    <a className={styles["nav-link"]}>
+                    <a>
                         <div className={styles["link-icon"]}>
                             <Image
                                 src="/assets/icons/projects.svg"
@@ -57,13 +57,13 @@ const NavMenu: React.FC<Props> = ({ open }: Props) => {
                                 objectFit="contain"
                             />
                         </div>
-                        <p className={styles["link-text"]}>Projects</p>
+                        <p>Projects</p>
                     </a>
                 </Link>
             </li>
             <li>
                 <Link href="/skills">
-                    <a className={styles["nav-link"]}>
+                    <a>
                         <div className={styles["link-icon"]}>
                             <Image
                                 src="/assets/icons/skills.svg"
@@ -72,7 +72,7 @@ const NavMenu: React.FC<Props> = ({ open }: Props) => {
                                 objectFit="contain"
                             />
                         </div>
-                        <p className={styles["link-text"]}>Skills</p>
+                        <p>Skills</p>
                     </a>
                 </Link>
             </li>
