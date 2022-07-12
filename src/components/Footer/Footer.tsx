@@ -1,5 +1,5 @@
 // Stylesheet
-import styles from "@/styles/Nav/Footer.module.scss";
+import styles from "./Footer.module.scss";
 // Next
 import Image from "next/image";
 import Link from "next/link";
@@ -7,10 +7,10 @@ import Link from "next/link";
 const Footer = () => {
     return (
         <div className={styles.footer}>
-            <p className={styles["footer-text"]}>Connect with me!</p>
+            <p>Connect with me!</p>
             <div className={styles["footer-icons"]}>
-                <Link href="https://github.com/czhangy">
-                    <a className={styles["footer-icon"]} target="_blank">
+                <Link href="https://github.com/czhangy" target="_blank">
+                    <a>
                         <Image
                             src="/assets/icons/github.svg"
                             alt="GitHub"
@@ -19,8 +19,11 @@ const Footer = () => {
                         />
                     </a>
                 </Link>
-                <Link href="https://www.linkedin.com/in/czhangy/">
-                    <a className={styles["footer-icon"]} target="_blank">
+                <Link
+                    href="https://www.linkedin.com/in/czhangy/"
+                    target="_blank"
+                >
+                    <a>
                         <Image
                             src="/assets/icons/linkedin.svg"
                             alt="LinkedIn"
@@ -29,8 +32,11 @@ const Footer = () => {
                         />
                     </a>
                 </Link>
-                <Link href="https://www.instagram.com/c.zhangg/">
-                    <a className={styles["footer-icon"]} target="_blank">
+                <Link
+                    href="https://www.instagram.com/c.zhangg/"
+                    target="_blank"
+                >
+                    <a>
                         <Image
                             src="/assets/icons/instagram.svg"
                             alt="Instagram"
@@ -39,8 +45,8 @@ const Footer = () => {
                         />
                     </a>
                 </Link>
-                <Link href="https://twitter.com/czhangy_">
-                    <a className={styles["footer-icon"]} target="_blank">
+                <Link href="https://twitter.com/czhangy_" target="_blank">
+                    <a>
                         <Image
                             src="/assets/icons/twitter.svg"
                             alt="Twitter"

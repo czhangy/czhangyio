@@ -3,8 +3,8 @@ import "@/styles/globals.scss";
 // TS
 import type { AppProps } from "next/app";
 // Nav components
-import Navbar from "@/components/Nav/Navbar/Navbar";
-import Footer from "@/components/Nav/Footer/Footer";
+import Navbar from "@/components/Navbar/Navbar";
+import Footer from "@/components/Footer/Footer";
 // React
 import { useEffect } from "react";
 

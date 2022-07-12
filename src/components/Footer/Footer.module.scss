@@ -9,7 +9,7 @@
     padding: constants.$padding;
     width: 100%;
 
-    .footer-text {
+    p {
         font-family: constants.$header-font;
         font-size: 1.5rem;
         letter-spacing: 1px;
@@ -20,7 +20,7 @@
         align-items: center;
         display: flex;
 
-        .footer-icon {
+        a {
             filter: var(--accent-color-svg);
             height: 2rem;
             margin-right: 2rem;
@@ -35,7 +35,7 @@
 }
 
 @media (hover: hover) {
-    .footer .footer-icons .footer-icon:hover {
+    .footer .footer-icons a:hover {
         filter: var(--emph-color-svg);
     }
 }

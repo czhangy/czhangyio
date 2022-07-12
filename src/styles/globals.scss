@@ -1,7 +1,7 @@
 @use "@/styles/constants";
 
 // Google Fonts
-@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,400;0,700;1,400;1,700&family=Staatliches&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Staatliches&display=swap");
 
 #app {
     overflow-x: hidden;
@@ -97,6 +97,7 @@ button {
     background: none;
     border: none;
     cursor: pointer;
+    padding: 0;
 }
 
 input,

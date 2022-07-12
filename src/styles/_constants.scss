@@ -21,18 +21,20 @@ $light-hover-color: #ffe6db;
 $light-menu-color: #feede6;
 
 // Fonts
-$main-font: "Exo 2", sans-serif;
-$header-font: "Staatliches", sans-serif;
+$main-font: Inter, sans-serif;
+$header-font: Staatliches, sans-serif;
 
 // Breakpoints
-$tablet: 1023px;
-$mobile: 767px;
+$desktop: 1023px;
+$tablet: 767px;
 
 // Important dimensions
 $navbar-height: 60px;
 $padding: 2rem;
 $max-width: 1360px;
-$homepage-padding: 15rem;
 
 // Animation
 $fade-in: opacity 1.5s ease, transform 1.5s ease;
+
+// Z-indices
+$nav-menu: 1;

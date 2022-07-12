@@ -1,0 +1,30 @@
+@use "@/styles/constants";
+
+.menu-button {
+    display: flex;
+    flex-direction: column;
+    height: 1.25rem;
+    justify-content: space-between;
+    transition: height 0.2s ease;
+    width: 2rem;
+
+    &:focus {
+        height: 1.6rem;
+    }
+
+    hr {
+        background: var(--accent-color);
+        height: 2px;
+        width: 100%;
+    }
+}
+
+@media (hover: hover) {
+    .menu-button:hover {
+        height: 1.6rem;
+
+        hr {
+            background: var(--emph-color);
+        }
+    }
+}

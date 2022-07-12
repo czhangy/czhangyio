@@ -1,11 +1,18 @@
 @use "@/styles/constants";
 
-#about {
+.page-wrapper {
     align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin: 0 auto;
     min-height: calc(100vh - constants.$navbar-height);
     padding: constants.$padding;
-    width: 100%;
+    max-width: constants.$max-width;
+}
+
+@media screen and (min-width: constants.$tablet) {
+    .page-wrapper {
+        padding: 5rem constants.$padding;
+    }
 }
