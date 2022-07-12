@@ -19,7 +19,7 @@ const HomePage: React.FC = () => {
         <PageWrapper>
             <div className={`${styles.headshot} ${show ? "show" : "from-top"}`}>
                 <Image
-                    src="/assets/images/headshot.webp"
+                    src="/assets/home/headshot.webp"
                     alt="Headshot"
                     layout="fill"
                     objectFit="contain"
