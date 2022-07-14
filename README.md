@@ -2,7 +2,7 @@
 
 <!-- Title -->
 
-<img src="public/assets/about/dev.png" alt="logo" width="200" height="auto" />
+<img src="public/assets/about/dev.webp" alt="logo" width="200" height="auto" />
 <h1>Personal Portfolio</h1>
 
 <!-- Badges -->
@@ -187,10 +187,10 @@ npm run dev
     -   [x] About experience
     -   [x] About hobbies
 
--   [ ] Build experience page
+-   [x] Build experience page
 
-    -   [ ] Timeline of all jobs
-    -   [ ] Job bullets + description
+    -   [x] Timeline of all jobs
+    -   [x] Job bullets + description
 
 -   [ ] Build projects page
 
