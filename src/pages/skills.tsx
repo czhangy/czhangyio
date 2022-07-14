@@ -12,7 +12,7 @@ type Props = {
 
 const Skills: NextPage<Props> = ({ skills }: Props) => {
     return (
-        <div id={styles.home}>
+        <div id="skills">
             <Head>
                 <title>My Skills | Charles Zhang</title>
             </Head>
