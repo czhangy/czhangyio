@@ -1,0 +1,44 @@
+@use "@/styles/constants";
+
+@media screen and (min-width: constants.$tablet) {
+    .container {
+        display: flex;
+        padding: 0 4rem;
+        width: 100%;
+
+        .arrow {
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 20px solid var(--accent-color);
+            height: 0;
+            transform: translateX(calc(-50% + 4px));
+            width: 0;
+        }
+
+        .start-point {
+            background: var(--accent-color);
+            height: 8px;
+            width: 50px;
+        }
+    }
+
+    .left {
+        justify-content: flex-start;
+
+        .start-point {
+            transform: translateX(calc(-50% + 4px));
+        }
+    }
+
+    .right {
+        justify-content: flex-end;
+
+        .start-point {
+            transform: translateX(calc(50% - 4px));
+        }
+    }
+
+    .timeline {
+        padding: 0 4rem;
+    }
+}

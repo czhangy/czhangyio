@@ -8,6 +8,7 @@
     margin: 0 auto;
     min-height: calc(100vh - constants.$navbar-height);
     padding: constants.$padding;
+    position: relative;
     max-width: constants.$max-width;
 }
 
