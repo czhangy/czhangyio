@@ -3,8 +3,6 @@ import type { NextPage } from "next";
 import Skill from "@/models/Skill";
 // Next
 import Head from "next/head";
-// Stylesheet
-import styles from "@/styles/Skills/Skills.module.scss";
 // Prisma
 import prisma from "@/lib/prisma";
 
