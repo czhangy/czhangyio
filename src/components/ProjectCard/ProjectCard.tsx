@@ -27,9 +27,7 @@ const ProjectCard: React.FC<Props> = ({ project }: Props) => {
                     ></Image>
                 </a>
             </Link>
-            <div className={`${styles.ribbon} ${styles.top}`}>
-                {project.name}
-            </div>
+            <h2 className={`${styles.ribbon} ${styles.top}`}>{project.name}</h2>
             <div className={`${styles.ribbon} ${styles.bottom}`}>
                 {project.gitLink ? (
                     <Link href={project.gitLink} target="_blank">

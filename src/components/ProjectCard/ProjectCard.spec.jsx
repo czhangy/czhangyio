@@ -5,20 +5,8 @@ import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
 // Helper function
 import { toSlug } from "@/utils/helpers";
-
 // Mock
-const mockProjects = [
-    {
-        gitLink: "https://github.com/user/test",
-        name: "Project with GitHub",
-        link: "https://test.com",
-    },
-    {
-        gitLink: null,
-        name: "Project without GitHub",
-        link: "https://test.com",
-    },
-];
+import { mockProjects } from "@/mocks/mocks.js";
 
 describe("<ProjectCard />", () => {
     it("Renders all content", () => {

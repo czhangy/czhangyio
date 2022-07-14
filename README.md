@@ -192,21 +192,19 @@ npm run dev
     -   [x] Timeline of all jobs
     -   [x] Job bullets + description
 
--   [ ] Build projects page
+-   [x] Build projects page
 
-    -   [ ] Links to individual projects
-    -   [ ] Grid with project cards
+    -   [x] Links to individual projects
+    -   [x] Grid with project cards
 
 -   [ ] Build skills page
 
     -   [ ] Sections for skill types
     -   [ ] Animated bars for proficiency rating
 
--   [ ] Build project cards
+-   [ ] Build individual project pages
 
-    -   [ ] Project card with site thumbnail + links to project page
-    -   [ ] Top ribbon with project name that links to deployed site
-    -   [ ] Bottom ribbon with tags
+    -   [ ] Documentation, descriptions, process, etc.
 
 -   [ ] Unit testing
 

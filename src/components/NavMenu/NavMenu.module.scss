@@ -38,10 +38,12 @@
 }
 
 .open {
+    opacity: 1;
     transform: translateY(0);
 }
 
 .closed {
+    opacity: 0;
     pointer-events: none;
     transform: translateY(-10px);
 }
