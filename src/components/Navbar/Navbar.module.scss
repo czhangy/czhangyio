@@ -30,7 +30,7 @@
 
 @media (hover: hover) {
     .navbar nav h1:hover {
-        color: var(--emph-color);
+        color: constants.$emph-color;
     }
 }
 

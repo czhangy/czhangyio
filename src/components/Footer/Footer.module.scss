@@ -36,6 +36,6 @@
 
 @media (hover: hover) {
     .footer .footer-icons a:hover {
-        filter: var(--emph-color-svg);
+        filter: constants.$emph-color-svg;
     }
 }
