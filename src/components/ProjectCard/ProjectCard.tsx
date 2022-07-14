@@ -15,15 +15,17 @@ type Props = {
 const ProjectCard: React.FC<Props> = ({ project }: Props) => {
     return (
         <div className={styles["project-card"]}>
-            <Link href="/">
-                <a
-                    className={styles["card-content"]}
-                    style={{
-                        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/projects/${toSlug(
+            <Link href={`/projects/${toSlug(project.name)}`}>
+                <a className={styles.bg}>
+                    <Image
+                        src={`/assets/projects/${toSlug(
                             project.name
-                        )}/thumbnail.webp')`,
-                    }}
-                />
+                        )}/thumbnail.webp`}
+                        alt={`${project.name} thumbnail`}
+                        layout="fill"
+                        objectFit="cover"
+                    ></Image>
+                </a>
             </Link>
             <div className={`${styles.ribbon} ${styles.top}`}>
                 {project.name}

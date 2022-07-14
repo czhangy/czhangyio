@@ -14,7 +14,7 @@ const mockExperience = {
 };
 
 describe("<TimelineElement />", () => {
-    it("renders all content", () => {
+    it("Renders all content", () => {
         render(<TimelineElement experience={mockExperience} index={0} />);
         expect(
             screen.getByAltText(`${mockExperience.name} logo`)
