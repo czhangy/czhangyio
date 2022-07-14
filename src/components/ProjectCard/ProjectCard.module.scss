@@ -1,17 +1,20 @@
 @use "@/styles/constants";
 
 .project-card {
-    align-items: center;
-    background-size: cover;
-    border-radius: 10px;
-    display: flex;
     flex: 1 1 400px;
-    flex-direction: column;
     height: 400px;
-    justify-content: center;
-    margin-bottom: 2rem;
-    padding: 1rem;
     position: relative;
+    transition: transform 0.2s ease;
+
+    .card-content {
+        background-position: center;
+        background-size: cover;
+        border-radius: 10px;
+        display: block;
+        height: 100%;
+        padding: 1rem;
+        width: 100%;
+    }
 
     .ribbon {
         --cut-size: 15px;
@@ -71,5 +74,17 @@
                 margin-right: 0;
             }
         }
+    }
+}
+
+@media (hover: hover) {
+    .project-card:hover {
+        transform: scale(1.05);
+    }
+}
+
+@media screen and (min-width: constants.$desktop) {
+    .project-card {
+        flex-basis: 500px;
     }
 }
