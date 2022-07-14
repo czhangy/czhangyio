@@ -6,10 +6,8 @@
  */
 export const showElements = (id: string, setter: (val: boolean) => void) => {
     const header: HTMLElement = document.getElementById(id)!;
-    if (header.getBoundingClientRect().top < window.innerHeight - 350) {
+    if (header.getBoundingClientRect().top < window.innerHeight - 350)
         setter(true);
-        window.removeEventListener("scroll", () => showElements(id, setter));
-    }
 };
 
 /*

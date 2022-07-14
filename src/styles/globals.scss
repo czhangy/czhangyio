@@ -52,8 +52,6 @@ body,
 body[data-theme="dark"] {
     --accent-color: #{constants.$dark-accent-color};
     --accent-color-svg: #{constants.$dark-accent-color-svg};
-    --emph-color: #{constants.$dark-emph-color};
-    --emph-color-svg: #{constants.$dark-emph-color-svg};
     --hover-color: #{constants.$dark-hover-color};
     --main-color: #{constants.$dark-main-color};
     --menu-color: #{constants.$dark-menu-color};
@@ -62,8 +60,6 @@ body[data-theme="dark"] {
 body[data-theme="light"] {
     --accent-color: #{constants.$light-accent-color};
     --accent-color-svg: #{constants.$light-accent-color-svg};
-    --emph-color: #{constants.$light-emph-color};
-    --emph-color-svg: #{constants.$light-emph-color-svg};
     --hover-color: #{constants.$light-hover-color};
     --main-color: #{constants.$light-main-color};
     --menu-color: #{constants.$light-menu-color};

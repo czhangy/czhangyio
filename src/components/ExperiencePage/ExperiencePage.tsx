@@ -27,6 +27,7 @@ const ExperiencePage: React.FC<Props> = ({ experience }: Props) => {
                 className={`${styles.container} ${
                     experience.length % 2 === 0 ? styles.right : styles.left
                 }`}
+                data-testid="start-point"
             >
                 <hr className={styles["start-point"]} />
             </div>

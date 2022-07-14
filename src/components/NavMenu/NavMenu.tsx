@@ -14,7 +14,6 @@ const NavMenu: React.FC<Props> = ({ open }: Props) => {
             className={`${styles["nav-menu"]} ${
                 open ? styles.open : styles.closed
             }`}
-            style={{ opacity: open ? 1 : 0 }}
         >
             <li>
                 <Link href="/about">

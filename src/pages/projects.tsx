@@ -3,10 +3,10 @@ import type { NextPage } from "next";
 import Project from "@/models/Project";
 // Next
 import Head from "next/head";
-// Stylesheet
-import styles from "@/styles/Projects/Projects.module.scss";
 // Prisma
 import prisma from "@/lib/prisma";
+// Component
+import ProjectsPage from "@/components/ProjectsPage/ProjectsPage";
 
 type Props = {
     projects: Project[];
@@ -14,11 +14,11 @@ type Props = {
 
 const Projects: NextPage<Props> = ({ projects }: Props) => {
     return (
-        <div id={styles.home}>
+        <div id="projects">
             <Head>
                 <title>My Projects | Charles Zhang</title>
             </Head>
-            Projects
+            <ProjectsPage projects={projects} />
         </div>
     );
 };

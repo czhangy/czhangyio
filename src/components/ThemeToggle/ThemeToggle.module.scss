@@ -21,7 +21,7 @@
     }
 
     .toggle-icon {
-        filter: var(--emph-color-svg);
+        filter: constants.$emph-color-svg;
         height: 1rem;
         position: absolute;
         width: 1rem;
@@ -50,10 +50,10 @@
 
 @media (hover: hover) {
     .theme-toggle:hover {
-        border-color: var(--emph-color);
+        border-color: constants.$emph-color;
 
         .toggle-thumb {
-            background: var(--emph-color);
+            background: constants.$emph-color;
         }
     }
 }

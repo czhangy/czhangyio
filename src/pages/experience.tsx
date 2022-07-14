@@ -3,8 +3,6 @@ import type { NextPage } from "next";
 import Experience from "@/models/Experience";
 // Next
 import Head from "next/head";
-// Stylesheet
-import styles from "@/styles/Experience/Experience.module.scss";
 // Prisma
 import prisma from "@/lib/prisma";
 // Component
@@ -16,7 +14,7 @@ type Props = {
 
 const Experience: NextPage<Props> = ({ experience }: Props) => {
     return (
-        <div id={styles.home}>
+        <div id="experience">
             <Head>
                 <title>My Experience | Charles Zhang</title>
             </Head>

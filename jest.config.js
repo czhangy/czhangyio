@@ -9,17 +9,17 @@ const customJestConfig = {
     testEnvironment: "jest-environment-jsdom",
     moduleNameMapper: {
         "^@/components(.*)$": "<rootDir>/src/components/$1",
+        "^@/mocks(.*)$": "<rootDir>/src/mocks/$1",
         "^@/utils(.*)$": "<rootDir>/src/utils/$1",
     },
-    // coverageReporters: ["json", "text", "html", "lcov"],
-    // coverageThreshold: {
-    //     global: {
-    //         branches: 70,
-    //         functions: 70,
-    //         lines: 70,
-    //         statements: 70,
-    //     },
-    // },
+    coverageThreshold: {
+        global: {
+            branches: 70,
+            functions: 70,
+            lines: 70,
+            statements: 70,
+        },
+    },
 };
 
 module.exports = createJestConfig(customJestConfig);

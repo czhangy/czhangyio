@@ -1,0 +1,93 @@
+@use "@/styles/constants";
+
+.project-card {
+    flex: 1 1 400px;
+    height: 400px;
+    position: relative;
+    transition: transform 0.2s ease;
+
+    .bg {
+        border-radius: 10px;
+        display: block;
+        filter: brightness(70%);
+        height: 100%;
+        position: relative;
+        width: 100%;
+    }
+
+    .ribbon {
+        --cut-size: 15px;
+        --fold-size: 10px;
+        --lr-padding: 2rem;
+        --offset: 1.5rem;
+        --tb-padding: 0.5rem;
+        background: constants.$emph-color;
+        position: absolute;
+    }
+
+    .top {
+        box-shadow: 0 calc(-1 * var(--fold-size)) 0 inset #0005;
+        color: black;
+        clip-path: polygon(
+            0 0,
+            100% 0,
+            calc(100% - var(--cut-size)) calc(50% - var(--fold-size) / 2),
+            100% calc(100% - var(--fold-size)),
+            var(--fold-size) calc(100% - var(--fold-size)),
+            var(--fold-size) 100%,
+            0 calc(100% - var(--fold-size))
+        );
+        inset: var(--offset) auto auto calc(-1 * var(--fold-size));
+        font-family: constants.$header-font;
+        font-size: constants.$header-size;
+        letter-spacing: 1px;
+        padding: var(--tb-padding) calc(var(--lr-padding) + var(--cut-size))
+            calc(var(--tb-padding) + var(--fold-size)) var(--lr-padding);
+    }
+
+    .bottom {
+        box-shadow: 0 var(--fold-size) 0 inset #0005;
+        clip-path: polygon(
+            0 var(--fold-size),
+            100% var(--fold-size),
+            calc(100% - var(--fold-size)) var(--fold-size),
+            calc(100% - var(--fold-size)) 0,
+            100% var(--fold-size),
+            100% 100%,
+            0 100%,
+            var(--cut-size) calc(50% + var(--fold-size) / 2)
+        );
+        display: flex;
+        inset: calc(100% - 4 * var(--offset)) calc(-1 * var(--fold-size)) auto
+            auto;
+        padding: calc(var(--tb-padding) + var(--fold-size)) var(--lr-padding)
+            var(--tb-padding) calc(var(--lr-padding) + var(--cut-size));
+
+        .link-icon {
+            height: 2rem;
+            margin-right: 0.5rem;
+            position: relative;
+            width: 2rem;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+@media (hover: hover) {
+    .project-card:hover {
+        transform: scale(1.05);
+
+        .bg {
+            filter: none;
+        }
+    }
+}
+
+@media screen and (min-width: constants.$desktop) {
+    .project-card {
+        flex-basis: 500px;
+    }
+}

@@ -21,18 +21,19 @@ const TimelineElement: React.FC<Props> = (props: Props) => {
     // Component state
     const [show, setShow] = useState<boolean>(false);
 
+    // Reference to listener
+    const showListener = () => {
+        showElements(`timeline-el-${props.index}`, setShow);
+    };
+
     // Update show state on scroll
     useEffect(() => {
         // Handle elements already in viewport
         showElements(`timeline-el-${props.index}`, setShow);
         // Scroll listener
-        document.addEventListener("scroll", () => {
-            showElements(`timeline-el-${props.index}`, setShow);
-        });
+        document.addEventListener("scroll", showListener);
         return function cleanup() {
-            document.removeEventListener("scroll", () => {
-                showElements(`timeline-el-${props.index}`, setShow);
-            });
+            document.removeEventListener("scroll", showListener);
         };
     }, []);
 

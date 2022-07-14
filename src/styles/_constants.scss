@@ -1,24 +1,23 @@
+// Color scheme
+$emph-color: #e7c815;
+$emph-color-svg: invert(76%) sepia(75%) saturate(638%) hue-rotate(357deg)
+    brightness(100%) contrast(105%);
+
 // Dark color scheme
 $dark-main-color: #3f3d53;
 $dark-accent-color: #ffffff;
 $dark-accent-color-svg: invert(100%) sepia(100%) saturate(2%) hue-rotate(57deg)
     brightness(113%) contrast(101%);
-$dark-emph-color: #ffd700;
-$dark-emph-color-svg: invert(76%) sepia(75%) saturate(638%) hue-rotate(357deg)
-    brightness(100%) contrast(105%);
 $dark-hover-color: #4b4963;
 $dark-menu-color: #1e1e29;
 
 // Light color scheme
-$light-main-color: #e8d8d1;
+$light-main-color: #ababff;
 $light-accent-color: #000000;
 $light-accent-color-svg: invert(0%) sepia(5%) saturate(7482%) hue-rotate(261deg)
     brightness(106%) contrast(106%);
-$light-emph-color: #c68e17;
-$light-emph-color-svg: invert(46%) sepia(99%) saturate(400%) hue-rotate(3deg)
-    brightness(103%) contrast(90%);
-$light-hover-color: #ffe6db;
-$light-menu-color: #feede6;
+$light-hover-color: #8484ff;
+$light-menu-color: #c1c1fc;
 
 // Fonts
 $main-font: Inter, sans-serif;

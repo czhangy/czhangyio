@@ -2,7 +2,7 @@
 
 <!-- Title -->
 
-<img src="public/assets/about/dev.png" alt="logo" width="200" height="auto" />
+<img src="public/assets/about/dev.webp" alt="logo" width="200" height="auto" />
 <h1>Personal Portfolio</h1>
 
 <!-- Badges -->
@@ -187,26 +187,24 @@ npm run dev
     -   [x] About experience
     -   [x] About hobbies
 
--   [ ] Build experience page
+-   [x] Build experience page
 
-    -   [ ] Timeline of all jobs
-    -   [ ] Job bullets + description
+    -   [x] Timeline of all jobs
+    -   [x] Job bullets + description
 
--   [ ] Build projects page
+-   [x] Build projects page
 
-    -   [ ] Links to individual projects
-    -   [ ] Grid with project cards
+    -   [x] Links to individual projects
+    -   [x] Grid with project cards
 
 -   [ ] Build skills page
 
     -   [ ] Sections for skill types
     -   [ ] Animated bars for proficiency rating
 
--   [ ] Build project cards
+-   [ ] Build individual project pages
 
-    -   [ ] Project card with site thumbnail + links to project page
-    -   [ ] Top ribbon with project name that links to deployed site
-    -   [ ] Bottom ribbon with tags
+    -   [ ] Documentation, descriptions, process, etc.
 
 -   [ ] Unit testing
 

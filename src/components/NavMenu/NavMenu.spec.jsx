@@ -7,7 +7,7 @@ import { act, fireEvent, render, screen } from "@testing-library/react";
 describe("<NavMenu />", () => {
     beforeEach(() => render(<Navbar />));
     it("Initializes with the nav menu closed", () => {
-        expect(screen.queryByRole("list")).not.toBeVisible();
+        expect(screen.queryByRole("list")).toHaveClass("closed");
     });
     it("Nav menu contains links to all pages", () => {
         act(() => fireEvent.click(screen.getAllByRole("button")[1]));

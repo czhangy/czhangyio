@@ -21,6 +21,6 @@
 
 @media (hover: hover) {
     .menu-button:hover hr {
-        background: var(--emph-color);
+        background: constants.$emph-color;
     }
 }
