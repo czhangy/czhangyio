@@ -1,0 +1,154 @@
+@use "@/styles/constants";
+
+.timeline-element {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 3rem;
+
+    .mark {
+        display: none;
+    }
+
+    .header {
+        align-items: center;
+        display: flex;
+        margin-bottom: 1rem;
+
+        .logo {
+            height: 60px;
+            margin-right: 1rem;
+            position: relative;
+            width: 60px;
+        }
+
+        .header-text {
+            h2 {
+                font-family: constants.$header-font;
+                font-size: 1.5rem;
+                letter-spacing: 1px;
+            }
+
+            p {
+                font-size: 0.8rem;
+            }
+        }
+    }
+
+    ul {
+        list-style: disc;
+        margin-left: 1rem;
+
+        li {
+            margin-bottom: 0.5rem;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: constants.$tablet) {
+    .timeline-element {
+        --timeline-thickness: 8px;
+        border-bottom: var(--timeline-thickness) solid var(--accent-color);
+        padding: 10rem 5rem;
+        position: relative;
+        margin-bottom: 0;
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        .mark {
+            align-items: center;
+            background: var(--main-color);
+            border: var(--timeline-thickness) solid var(--accent-color);
+            border-radius: 50%;
+            display: flex;
+            font-family: constants.$header-font;
+            font-size: 1.5rem;
+            height: 150px;
+            justify-content: center;
+            letter-spacing: 1px;
+            position: absolute;
+            text-align: center;
+            width: 150px;
+            z-index: constants.$timestamp;
+        }
+
+        .header {
+            .logo {
+                height: 75px;
+                margin-right: 2rem;
+                width: 75px;
+            }
+
+            .header-text {
+                h2 {
+                    font-size: 2rem;
+                }
+
+                p {
+                    font-size: constants.$body-size;
+                    font-weight: bold;
+                    letter-spacing: 1px;
+                }
+
+                .timeframe {
+                    display: none;
+                }
+            }
+        }
+
+        ul li {
+            font-size: constants.$body-size;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+    }
+
+    .left {
+        border-left: var(--timeline-thickness) solid var(--accent-color);
+        padding-left: 8rem;
+
+        .mark {
+            left: -79px;
+        }
+    }
+
+    .right {
+        border-right: var(--timeline-thickness) solid var(--accent-color);
+        padding-right: 8rem;
+
+        .mark {
+            right: -79px;
+        }
+    }
+}
+
+@media screen and (min-width: constants.$desktop) {
+    .timeline-element {
+        .header {
+            .logo {
+                height: 100px;
+                width: 100px;
+            }
+
+            .header-text {
+                h2 {
+                    font-size: 2.5rem;
+                }
+
+                p {
+                    font-size: constants.$desktop-body-size;
+                }
+            }
+        }
+
+        ul li {
+            font-size: constants.$desktop-body-size;
+        }
+    }
+}

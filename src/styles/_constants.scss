@@ -24,6 +24,13 @@ $light-menu-color: #feede6;
 $main-font: Inter, sans-serif;
 $header-font: Staatliches, sans-serif;
 
+// Font sizes
+$body-size: 1.2rem;
+$desktop-body-size: 1.4rem;
+$header-size: 2rem;
+$tablet-header-size: 2.5rem;
+$desktop-header-size: 3rem;
+
 // Breakpoints
 $desktop: 1023px;
 $tablet: 767px;
@@ -37,4 +44,5 @@ $max-width: 1360px;
 $fade-in: opacity 1.5s ease, transform 1.5s ease;
 
 // Z-indices
-$nav-menu: 1;
+$timestamp: 1;
+$nav-menu: 2;

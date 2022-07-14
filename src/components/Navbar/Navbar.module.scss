@@ -17,7 +17,7 @@
 
         h1 {
             font-family: constants.$header-font;
-            font-size: 1.75rem;
+            font-size: constants.$header-size;
             letter-spacing: 2px;
         }
 
@@ -36,6 +36,6 @@
 
 @media screen and (min-width: constants.$tablet) {
     .navbar nav h1 {
-        font-size: 2rem;
+        font-size: constants.$tablet-header-size;
     }
 }

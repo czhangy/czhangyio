@@ -11,7 +11,7 @@
 
 .landing-text {
     font-family: constants.$header-font;
-    font-size: 2.2rem;
+    font-size: constants.$header-size;
     letter-spacing: 2px;
     margin: 2rem 0;
 }
@@ -27,8 +27,7 @@
         a {
             border: 2px solid var(--accent-color);
             display: inline-block;
-            font-family: constants.$main-font;
-            font-size: 1.25rem;
+            font-size: constants.$body-size;
             letter-spacing: 1px;
             margin-right: 0.5rem;
             padding: 0.5rem 1rem;
@@ -49,7 +48,7 @@
 
 @media screen and (min-width: constants.$tablet) {
     .landing-text {
-        font-size: 3rem;
+        font-size: constants.$tablet-header-size;
     }
 
     .nav-links {
@@ -57,10 +56,16 @@
 
         div {
             margin: 0 0.25rem;
-
-            a {
-                font-size: 1.5rem;
-            }
         }
+    }
+}
+
+@media screen and (min-width: constants.$desktop) {
+    .landing-text {
+        font-size: constants.$desktop-header-size;
+    }
+
+    .nav-links div a {
+        font-size: constants.$desktop-body-size;
     }
 }

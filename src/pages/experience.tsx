@@ -7,6 +7,8 @@ import Head from "next/head";
 import styles from "@/styles/Experience/Experience.module.scss";
 // Prisma
 import prisma from "@/lib/prisma";
+// Component
+import ExperiencePage from "@/components/ExperiencePage/ExperiencePage";
 
 type Props = {
     experience: Experience[];
@@ -18,7 +20,7 @@ const Experience: NextPage<Props> = ({ experience }: Props) => {
             <Head>
                 <title>My Experience | Charles Zhang</title>
             </Head>
-            Experience
+            <ExperiencePage experience={experience} />
         </div>
     );
 };
