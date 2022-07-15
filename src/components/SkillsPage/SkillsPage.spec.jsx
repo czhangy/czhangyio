@@ -9,7 +9,8 @@ import { mockSkills } from "@/mocks/mocks.js";
 describe("<SkillsPage />", () => {
     it("Renders all cards", () => {
         render(<SkillsPage skills={mockSkills} />);
-        const headers = screen.queryAllByRole("heading");
-        expect(headers.length).toEqual(mockSkills.length);
+        expect(screen.queryAllByRole("heading").length).toEqual(
+            mockSkills.length
+        );
     });
 });

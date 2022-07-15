@@ -7,27 +7,18 @@ import { render, screen } from "@testing-library/react";
 describe("<AboutPage />", () => {
     beforeEach(() => render(<AboutPage />));
     it("Renders 'My Story' section", () => {
-        const header = screen.queryByText("My Story");
-        const p = screen.queryByTestId("story-p");
-        const img = screen.queryByAltText("Smile");
-        expect(header).toBeInTheDocument();
-        expect(p).toBeInTheDocument();
-        expect(img).toBeInTheDocument();
+        expect(screen.queryByText("My Story")).toBeInTheDocument();
+        expect(screen.queryByTestId("story-p")).toBeInTheDocument();
+        expect(screen.queryByAltText("Smile")).toBeInTheDocument();
     });
     it("Renders 'My Work' section", () => {
-        const header = screen.queryByText("My Work");
-        const p = screen.queryByTestId("work-p");
-        const img = screen.queryByAltText("Dev");
-        expect(header).toBeInTheDocument();
-        expect(p).toBeInTheDocument();
-        expect(img).toBeInTheDocument();
+        expect(screen.queryByText("My Work")).toBeInTheDocument();
+        expect(screen.queryByTestId("work-p")).toBeInTheDocument();
+        expect(screen.queryByAltText("Dev")).toBeInTheDocument();
     });
     it("Renders 'My Interests' section", () => {
-        const header = screen.queryByText("My Interests");
-        const p = screen.queryByTestId("interests-p");
-        const img = screen.queryByAltText("Basketball");
-        expect(header).toBeInTheDocument();
-        expect(p).toBeInTheDocument();
-        expect(img).toBeInTheDocument();
+        expect(screen.queryByText("My Interests")).toBeInTheDocument();
+        expect(screen.queryByTestId("interests-p")).toBeInTheDocument();
+        expect(screen.queryByAltText("Basketball")).toBeInTheDocument();
     });
 });
