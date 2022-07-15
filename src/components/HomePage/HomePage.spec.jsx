@@ -7,21 +7,21 @@ import { render, screen } from "@testing-library/react";
 describe("<HomePage />", () => {
     beforeEach(() => render(<HomePage />));
     it("Renders headshot", () => {
-        const headshot = screen.queryByAltText("Headshot");
-        expect(headshot).toBeInTheDocument();
+        expect(screen.queryByAltText("Headshot")).toBeInTheDocument();
     });
     it("Renders landing page text", () => {
-        const text = screen.queryByText("Hi, I'm Charles.");
-        expect(text).toBeInTheDocument();
+        expect(screen.queryByText("Hi, I'm Charles.")).toBeInTheDocument();
     });
     it("Renders nav links", () => {
-        const aboutLink = screen.queryByText("About");
-        const experienceLink = screen.queryByText("Experience");
-        const projectsLink = screen.queryByText("Projects");
-        const skillsLink = screen.queryByText("Skills");
-        expect(aboutLink).toHaveAttribute("href", "/about");
-        expect(experienceLink).toHaveAttribute("href", "/experience");
-        expect(projectsLink).toHaveAttribute("href", "/projects");
-        expect(skillsLink).toHaveAttribute("href", "/skills");
+        expect(screen.queryByText("About")).toHaveAttribute("href", "/about");
+        expect(screen.queryByText("Experience")).toHaveAttribute(
+            "href",
+            "/experience"
+        );
+        expect(screen.queryByText("Projects")).toHaveAttribute(
+            "href",
+            "/projects"
+        );
+        expect(screen.queryByText("Skills")).toHaveAttribute("href", "/skills");
     });
 });

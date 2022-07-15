@@ -1,16 +1,16 @@
 // Component
-import ProjectsPage from "./ProjectsPage";
+import SkillsPage from "./SkillsPage";
 // Libraries
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
 // Mock
-import { mockProjects } from "@/mocks/mocks.js";
+import { mockSkills } from "@/mocks/mocks.js";
 
-describe("<ProjectsPage />", () => {
+describe("<SkillsPage />", () => {
     it("Renders all cards", () => {
-        render(<ProjectsPage projects={mockProjects} />);
+        render(<SkillsPage skills={mockSkills} />);
         expect(screen.queryAllByRole("heading").length).toEqual(
-            mockProjects.length
+            mockSkills.length
         );
     });
 });

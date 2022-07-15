@@ -27,3 +27,21 @@ export const mockProjects = [
         link: "https://test.com",
     },
 ];
+
+export const mockSkills = [
+    {
+        name: "A",
+        mainHex: "#000000",
+        accentHex: "#FFFFFF",
+    },
+    {
+        name: "B",
+        mainHex: "#000000",
+        accentHex: "#FFFFFF",
+    },
+    {
+        name: "C",
+        mainHex: "#000000",
+        accentHex: "#FFFFFF",
+    },
+];

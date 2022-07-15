@@ -11,13 +11,21 @@ describe("<NavMenu />", () => {
     });
     it("Nav menu contains links to all pages", () => {
         act(() => fireEvent.click(screen.getAllByRole("button")[1]));
-        const aboutLink = screen.queryByText("About").closest("a");
-        const experienceLink = screen.queryByText("Experience").closest("a");
-        const projectsLink = screen.queryByText("Projects").closest("a");
-        const skillsLink = screen.queryByText("Skills").closest("a");
-        expect(aboutLink).toHaveAttribute("href", "/about");
-        expect(experienceLink).toHaveAttribute("href", "/experience");
-        expect(projectsLink).toHaveAttribute("href", "/projects");
-        expect(skillsLink).toHaveAttribute("href", "/skills");
+        expect(screen.queryByText("About").closest("a")).toHaveAttribute(
+            "href",
+            "/about"
+        );
+        expect(screen.queryByText("Experience").closest("a")).toHaveAttribute(
+            "href",
+            "/experience"
+        );
+        expect(screen.queryByText("Projects").closest("a")).toHaveAttribute(
+            "href",
+            "/projects"
+        );
+        expect(screen.queryByText("Skills").closest("a")).toHaveAttribute(
+            "href",
+            "/skills"
+        );
     });
 });

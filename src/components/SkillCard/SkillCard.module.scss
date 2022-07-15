@@ -1,0 +1,44 @@
+@use "@/styles/constants";
+
+.skill-card {
+    align-items: center;
+    background: var(--menu-color);
+    display: flex;
+    flex: 1 1 400px;
+    overflow: hidden;
+    padding: 2rem;
+    position: relative;
+    transition: transform 0.2s ease;
+
+    .logo {
+        height: 100px;
+        margin-right: 2rem;
+        position: relative;
+        width: 100px;
+    }
+
+    h2 {
+        font-family: constants.$header-font;
+        font-size: constants.$header-size;
+        letter-spacing: 2px;
+    }
+
+    .ribbon {
+        background: #08769b;
+        box-shadow: 0 0 0 999px #08769b;
+        clip-path: inset(0 -100%);
+        height: 20px;
+        inset: 0 0 auto auto;
+        position: absolute;
+        transform: translate(29.3%) rotate(45deg);
+        transform-origin: 0 0;
+    }
+
+    .main {
+        width: 6rem;
+    }
+
+    .accent {
+        width: 2rem;
+    }
+}

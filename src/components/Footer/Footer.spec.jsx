@@ -7,8 +7,7 @@ import { render, screen } from "@testing-library/react";
 describe("<Footer />", () => {
     beforeEach(() => render(<Footer />));
     it("Renders text", () => {
-        const siteTitle = screen.queryByText("Connect with me!");
-        expect(siteTitle).toBeInTheDocument();
+        expect(screen.queryByText("Connect with me!")).toBeInTheDocument();
     });
     it("Contains links to all socials", () => {
         const links = screen.queryAllByRole("link");

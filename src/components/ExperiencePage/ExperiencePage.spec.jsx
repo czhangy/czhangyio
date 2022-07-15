@@ -9,8 +9,9 @@ import { mockExperiences } from "@/mocks/mocks.js";
 describe("<ExperiencePage />", () => {
     it("Renders all experiences", () => {
         render(<ExperiencePage experience={mockExperiences} />);
-        const headers = screen.queryAllByRole("heading");
-        expect(headers.length).toEqual(mockExperiences.length);
+        expect(screen.queryAllByRole("heading").length).toEqual(
+            mockExperiences.length
+        );
     });
     it("Renders starting point on the left for odd lengths", () => {
         render(<ExperiencePage experience={mockExperiences.slice(1)} />);
