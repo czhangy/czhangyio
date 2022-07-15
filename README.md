@@ -197,10 +197,9 @@ npm run dev
     -   [x] Links to individual projects
     -   [x] Grid with project cards
 
--   [ ] Build skills page
+-   [x] Build skills page
 
-    -   [ ] Sections for skill types
-    -   [ ] Animated bars for proficiency rating
+    -   [x] Cards for all skills
 
 -   [ ] Build individual project pages
 
