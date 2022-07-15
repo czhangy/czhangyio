@@ -5,6 +5,8 @@ import Skill from "@/models/Skill";
 import Head from "next/head";
 // Prisma
 import prisma from "@/lib/prisma";
+// Component
+import SkillsPage from "@/components/SkillsPage/SkillsPage";
 
 type Props = {
     skills: Skill[];
@@ -16,7 +18,7 @@ const Skills: NextPage<Props> = ({ skills }: Props) => {
             <Head>
                 <title>My Skills | Charles Zhang</title>
             </Head>
-            Skills
+            <SkillsPage skills={skills} />
         </div>
     );
 };
@@ -25,6 +27,11 @@ const Skills: NextPage<Props> = ({ skills }: Props) => {
 export async function getStaticProps() {
     try {
         const skills: Skill[] | null = await prisma.skill.findMany({
+            where: {
+                proficiency: {
+                    gt: 0,
+                },
+            },
             orderBy: {
                 name: "asc",
             },

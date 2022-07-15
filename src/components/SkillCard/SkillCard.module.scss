@@ -1,0 +1,24 @@
+@use "@/styles/constants";
+
+.skill-card {
+    align-items: center;
+    background: var(--menu-color);
+    display: flex;
+    flex: 1 1 400px;
+    padding: 2rem;
+    position: relative;
+    transition: transform 0.2s ease;
+
+    .logo {
+        height: 100px;
+        margin-right: 2rem;
+        position: relative;
+        width: 100px;
+    }
+
+    h2 {
+        font-family: constants.$header-font;
+        font-size: constants.$header-size;
+        letter-spacing: 2px;
+    }
+}
