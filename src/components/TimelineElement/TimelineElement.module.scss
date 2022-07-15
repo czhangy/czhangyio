@@ -63,9 +63,10 @@
 
         .mark {
             align-items: center;
-            background: var(--main-color);
+            background: constants.$emph-color;
             border: var(--timeline-thickness) solid var(--accent-color);
             border-radius: 50%;
+            color: black;
             display: flex;
             font-family: constants.$header-font;
             font-size: 1.5rem;
