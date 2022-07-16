@@ -11,6 +11,7 @@ import Image from "next/image";
 // Components
 import PageWrapper from "@/components/PageWrapper/PageWrapper";
 import ProjectHeader from "@/components/ProjectHeader/ProjectHeader";
+import ProjectTags from "@/components/ProjectTags/ProjectTags";
 
 type Props = {
     splekbot: Project;
@@ -33,6 +34,7 @@ const Splekbot: NextPage<Props> = ({ splekbot }: Props) => {
                         objectFit="contain"
                     />
                 </div>
+                <ProjectTags tags={splekbot.tags} />
             </PageWrapper>
         </div>
     );

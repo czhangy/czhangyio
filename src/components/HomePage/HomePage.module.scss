@@ -3,10 +3,10 @@
 .headshot {
     border: 5px solid var(--accent-color);
     border-radius: 50%;
-    height: 20rem;
+    height: 15rem;
     overflow: hidden;
     position: relative;
-    width: 20rem;
+    width: 15rem;
 }
 
 .landing-text {
@@ -47,6 +47,11 @@
 }
 
 @media screen and (min-width: constants.$tablet) {
+    .headshot {
+        height: 15rem;
+        width: 15rem;
+    }
+
     .landing-text {
         font-size: constants.$tablet-header-size;
     }
