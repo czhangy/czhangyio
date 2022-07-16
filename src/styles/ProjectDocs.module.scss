@@ -1,0 +1,14 @@
+@use "@/styles/constants";
+
+.subheader {
+    font-family: constants.$header-font;
+    font-size: constants.$header-size;
+    letter-spacing: 1px;
+    text-decoration: underline;
+}
+
+.image-container {
+    height: 300px;
+    position: relative;
+    width: 300px;
+}

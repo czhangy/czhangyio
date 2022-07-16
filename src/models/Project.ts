@@ -6,5 +6,5 @@ export default interface Project {
     gitLink: string | null;
     link: string;
     name: string;
-    tags?: Skill[];
+    tags: Skill[];
 }
