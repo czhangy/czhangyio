@@ -1,0 +1,46 @@
+@use "@/styles/constants";
+
+.section {
+    margin-bottom: 2rem;
+    width: 100%;
+
+    h4 {
+        font-family: constants.$header-font;
+        font-size: 1.7rem;
+        margin-bottom: 1rem;
+        letter-spacing: 1px;
+        text-align: center;
+        text-decoration: underline;
+    }
+
+    p {
+        align-items: center;
+        display: flex;
+        margin-bottom: 1rem;
+        font-size: constants.$body-size;
+        text-indent: 4ch;
+        width: 100%;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media screen and (min-width: constants.$tablet) {
+    .section h4 {
+        font-size: constants.$tablet-header-size;
+        text-align: left;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: constants.$desktop) {
+    .section {
+        margin-bottom: 4rem;
+
+        p {
+            font-size: constants.$desktop-body-size;
+        }
+    }
+}

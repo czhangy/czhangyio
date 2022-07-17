@@ -1,0 +1,94 @@
+@use "@/styles/constants";
+
+.project-carousel {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    width: 100%;
+
+    .window {
+        --img-size: 300px;
+        align-items: center;
+        display: flex;
+        height: var(--img-size);
+        position: relative;
+        width: var(--img-size);
+
+        button {
+            --button-size: 20px;
+            --button-spacing: -40px;
+            border-top: var(--button-size) solid transparent;
+            border-bottom: var(--button-size) solid transparent;
+            height: 0;
+            position: absolute;
+            width: 0;
+        }
+
+        button.left {
+            border-right: var(--button-size) solid var(--accent-color);
+            left: var(--button-spacing);
+        }
+
+        button.right {
+            border-left: var(--button-size) solid var(--accent-color);
+            right: var(--button-spacing);
+        }
+
+        .img {
+            height: 100%;
+            opacity: 0;
+            pointer-events: none;
+            position: absolute;
+            transition: all 0.5s ease;
+            width: 100%;
+        }
+
+        .img.left {
+            transform: translateX(-30px);
+        }
+
+        .img.right {
+            transform: translateX(30px);
+        }
+
+        .img.show {
+            opacity: 1;
+            pointer-events: all;
+            transform: translateX(0);
+        }
+    }
+}
+
+@media (hover: hover) {
+    .project-carousel .window {
+        .left:hover {
+            border-right: var(--button-size) solid constants.$emph-color;
+        }
+
+        .right:hover {
+            border-left: var(--button-size) solid constants.$emph-color;
+        }
+    }
+}
+
+@media screen and (min-width: constants.$tablet) {
+    .project-carousel .window {
+        --img-size: 450px;
+
+        button {
+            --button-size: 30px;
+            --button-spacing: -60px;
+        }
+    }
+}
+
+@media screen and (min-width: constants.$desktop) {
+    .project-carousel {
+        margin-top: 4rem;
+
+        .window {
+            --img-size: 600px;
+        }
+    }
+}

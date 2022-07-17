@@ -15,6 +15,7 @@ const ProjectTags: React.FC<Props> = ({ tags }: Props) => {
                     <h6
                         className={styles.tag}
                         style={{ background: tag.mainHex }}
+                        key={i}
                     >
                         {tag.name}
                     </h6>

@@ -4,15 +4,17 @@
     align-items: center;
     border-bottom: 3px solid var(--accent-color);
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 2rem;
-    width: 100%;
+    justify-content: center;
+    margin-bottom: 3rem;
+    max-width: 70%;
+    padding: 0 3rem;
+    padding-bottom: 0.5rem;
 
     h2 {
         font-family: constants.$header-font;
         font-size: constants.$header-size;
         letter-spacing: 1px;
-        max-width: 80%;
+        margin-right: 2rem;
         text-align: center;
     }
 
