@@ -18,6 +18,7 @@ const ProjectHeader: React.FC<Props> = ({ project }: Props) => {
                     <a
                         href={project.gitLink}
                         target="_blank"
+                        rel="noreferrer"
                         className={styles.link}
                     >
                         <Image
@@ -30,7 +31,12 @@ const ProjectHeader: React.FC<Props> = ({ project }: Props) => {
                 ) : (
                     ""
                 )}
-                <a href={project.link} target="_blank" className={styles.link}>
+                <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    className={styles.link}
+                >
                     <Image
                         src="/assets/icons/link.svg"
                         alt="Site link"

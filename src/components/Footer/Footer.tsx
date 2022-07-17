@@ -8,7 +8,11 @@ const Footer = () => {
         <div className={styles.footer}>
             <p>Connect with me!</p>
             <div className={styles["footer-icons"]}>
-                <a href="https://github.com/czhangy" target="_blank">
+                <a
+                    href="https://github.com/czhangy"
+                    target="_blank"
+                    rel="noreferrer"
+                >
                     <Image
                         src="/assets/icons/github.svg"
                         alt="GitHub"
@@ -16,7 +20,11 @@ const Footer = () => {
                         objectFit="contain"
                     />
                 </a>
-                <a href="https://www.linkedin.com/in/czhangy/" target="_blank">
+                <a
+                    href="https://www.linkedin.com/in/czhangy/"
+                    target="_blank"
+                    rel="noreferrer"
+                >
                     <Image
                         src="/assets/icons/linkedin.svg"
                         alt="LinkedIn"
@@ -24,7 +32,11 @@ const Footer = () => {
                         objectFit="contain"
                     />
                 </a>
-                <a href="https://www.instagram.com/c.zhangg/" target="_blank">
+                <a
+                    href="https://www.instagram.com/c.zhangg/"
+                    target="_blank"
+                    rel="noreferrer"
+                >
                     <Image
                         src="/assets/icons/instagram.svg"
                         alt="Instagram"
@@ -32,7 +44,11 @@ const Footer = () => {
                         objectFit="contain"
                     />
                 </a>
-                <a href="https://twitter.com/czhangy_" target="_blank">
+                <a
+                    href="https://twitter.com/czhangy_"
+                    target="_blank"
+                    rel="noreferrer"
+                >
                     <Image
                         src="/assets/icons/twitter.svg"
                         alt="Twitter"
