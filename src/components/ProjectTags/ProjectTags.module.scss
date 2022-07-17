@@ -1,0 +1,32 @@
+@use "@/styles/constants";
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    width: 100%;
+
+    .tag {
+        border: 2px solid white;
+        border-radius: 10px;
+        color: white;
+        font-family: constants.$header-font;
+        font-size: constants.$body-size;
+        letter-spacing: 1px;
+        padding: 0.4rem 1.4rem;
+    }
+}
+
+@media screen and (min-width: constants.$tablet) {
+    .project-tags {
+        justify-content: flex-start;
+    }
+}
+
+@media screen and (min-width: constants.$desktop) {
+    .project-tags .tag {
+        font-size: constants.$desktop-body-size;
+        padding: 0.5rem 1.5rem;
+    }
+}

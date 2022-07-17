@@ -1,40 +1,25 @@
 // Stylesheet
-import styles from "./ProjectCard.module.scss";
-// TS
-import Project from "@/models/Project";
-// Helper function
-import { toSlug } from "@/utils/helpers";
+import styles from "./ProjectHeader.module.scss";
 // Next
 import Image from "next/image";
-import Link from "next/link";
+// TS
+import Project from "@/models/Project";
 
 type Props = {
     project: Project;
 };
 
-const ProjectCard: React.FC<Props> = ({ project }: Props) => {
+const ProjectHeader: React.FC<Props> = ({ project }: Props) => {
     return (
-        <div className={styles["project-card"]}>
-            <Link href={`/projects/${toSlug(project.name)}`}>
-                <a className={styles.bg}>
-                    <Image
-                        src={`/assets/projects/${toSlug(
-                            project.name
-                        )}/thumbnail.webp`}
-                        alt={`${project.name} thumbnail`}
-                        layout="fill"
-                        objectFit="cover"
-                    ></Image>
-                </a>
-            </Link>
-            <h2 className={`${styles.ribbon} ${styles.top}`}>{project.name}</h2>
-            <div className={`${styles.ribbon} ${styles.bottom}`}>
+        <div className={styles["project-header"]}>
+            <h2>{project.name}</h2>
+            <div className={styles.links}>
                 {project.gitLink ? (
                     <a
                         href={project.gitLink}
                         target="_blank"
                         rel="noreferrer"
-                        className={styles["link-icon"]}
+                        className={styles.link}
                     >
                         <Image
                             src="/assets/icons/github.svg"
@@ -50,7 +35,7 @@ const ProjectCard: React.FC<Props> = ({ project }: Props) => {
                     href={project.link}
                     target="_blank"
                     rel="noreferrer"
-                    className={styles["link-icon"]}
+                    className={styles.link}
                 >
                     <Image
                         src="/assets/icons/link.svg"
@@ -64,4 +49,4 @@ const ProjectCard: React.FC<Props> = ({ project }: Props) => {
     );
 };
 
-export default ProjectCard;
+export default ProjectHeader;

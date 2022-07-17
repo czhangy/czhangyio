@@ -1,0 +1,61 @@
+@use "@/styles/constants";
+
+.project-header {
+    align-items: center;
+    border-bottom: 3px solid var(--accent-color);
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+    max-width: 70%;
+    padding: 0 3rem;
+    padding-bottom: 0.5rem;
+
+    h2 {
+        font-family: constants.$header-font;
+        font-size: constants.$header-size;
+        letter-spacing: 1px;
+        margin-right: 2rem;
+        text-align: center;
+    }
+
+    .links {
+        display: flex;
+        gap: 0.5rem;
+
+        .link {
+            filter: var(--accent-color-svg);
+            height: 30px;
+            position: relative;
+            width: 30px;
+        }
+    }
+}
+
+@media (hover: hover) {
+    .project-header .links .link:hover {
+        filter: constants.$emph-color-svg;
+    }
+}
+
+@media screen and (min-width: constants.$tablet) {
+    .project-header {
+        padding-bottom: 1rem;
+
+        h2 {
+            font-size: constants.$tablet-header-size;
+            text-align: left;
+        }
+
+        .links .link {
+            height: 50px;
+            width: 50px;
+        }
+    }
+}
+
+@media screen and (min-width: constants.$desktop) {
+    .project-header h2 {
+        font-size: constants.$desktop-header-size;
+        letter-spacing: 2px;
+    }
+}

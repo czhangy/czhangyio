@@ -23,7 +23,6 @@
 
     p {
         font-size: constants.$body-size;
-        letter-spacing: 1px;
     }
 }
 
@@ -35,6 +34,10 @@
 
     .content-container {
         margin-bottom: 3rem;
+
+        p {
+            letter-spacing: 1px;
+        }
     }
 }
 

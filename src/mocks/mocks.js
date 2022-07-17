@@ -15,19 +15,6 @@ export const mockExperiences = [
     },
 ];
 
-export const mockProjects = [
-    {
-        gitLink: "https://github.com/user/test",
-        name: "Project with GitHub",
-        link: "https://test.com",
-    },
-    {
-        gitLink: null,
-        name: "Project without GitHub",
-        link: "https://test.com",
-    },
-];
-
 export const mockSkills = [
     {
         name: "A",
@@ -43,5 +30,19 @@ export const mockSkills = [
         name: "C",
         mainHex: "#000000",
         accentHex: "#FFFFFF",
+    },
+];
+
+export const mockProjects = [
+    {
+        gitLink: "https://github.com/user/test",
+        name: "Project with GitHub",
+        link: "https://test.com",
+        tags: [...mockSkills],
+    },
+    {
+        gitLink: null,
+        name: "Project without GitHub",
+        link: "https://test.com",
     },
 ];
