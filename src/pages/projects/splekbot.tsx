@@ -16,30 +16,32 @@ const Splekbot: NextPage<Props> = ({ splekbot }: Props) => {
     const about = (
         <p>
             Splekbot was a game I helped develop with a small team as part of
-            ACM Studio's Winter Showcase. The game was developed using the Unity
-            Engine and C#, and centers around the game of Splek, a futuristic
-            adaptation of tennis. The player plays as the main character, Zorb,
-            who competes against the most elite Splek players from around the
-            galaxy, attempting to reunite with his friends. To do so, the player
-            must progress through the cosmos, battling with the unique skillsets
-            of their opponents, and emerging as the Splek champion. This game is
-            available for download on Windows, MacOS, and Linux.
+            ACM Studio&apos;s Winter Showcase. The game was developed using the
+            Unity Engine and C#, and centers around the game of Splek, a
+            futuristic adaptation of tennis. The player plays as the main
+            character, Zorb, who competes against the most elite Splek players
+            from around the galaxy, attempting to reunite with his friends. To
+            do so, the player must progress through the cosmos, battling with
+            the unique skillsets of their opponents, and emerging as the Splek
+            champion. This game is available for download on Windows, MacOS, and
+            Linux.
         </p>
     );
 
     const features = (
         <p>
-            The game's interface centers around a world map, where the player
-            can select from 1 of 4 levels. Only 1 level is unlocked at first,
-            but as the player completes each level, a new one will open. Each
-            level presents a unique arena and opponent for the player to test
-            their skills against in a game of Splek. In each match, the first to
-            5 points wins, and the player must win to proceed to the next step
-            in their journey. Beaten levels can be replayed at any time. Each
-            arena and opponent feature original assets, which help give the game
-            a more distinct identity. In addition to the gameplay, a small
-            storyline about Zorb's adventures accompanies the level progression
-            in an effort to immerse the player in the world of Splek.
+            The game&apos;s interface centers around a world map, where the
+            player can select from 1 of 4 levels. Only 1 level is unlocked at
+            first, but as the player completes each level, a new one will open.
+            Each level presents a unique arena and opponent for the player to
+            test their skills against in a game of Splek. In each match, the
+            first to 5 points wins, and the player must win to proceed to the
+            next step in their journey. Beaten levels can be replayed at any
+            time. Each arena and opponent feature original assets, which help
+            give the game a more distinct identity. In addition to the gameplay,
+            a small storyline about Zorb&apos;s adventures accompanies the level
+            progression in an effort to immerse the player in the world of
+            Splek.
         </p>
     );
 
@@ -71,14 +73,14 @@ const Splekbot: NextPage<Props> = ({ splekbot }: Props) => {
             channels made it challenging to get a big-picture idea of how the
             project was going. In terms of the technologies and development
             process, the most important thing Splekbot did for me was show me
-            that game development isn't what I'm really passionate about. My
-            whole process seemed to consist of searching through pre-built
-            technologies for something that fit my use case and inserting it
-            into our codebase. Nothing seemed especially satisfying, and it was
-            hard to feel any sense of ownership over my own contributions. Due
-            to this, I feel that this project taught me a lot about what I like
-            and don't like in development, and for that reason, I would say it
-            was a great success for a first project.
+            that game development isn&apos;t what I&apos;m really passionate
+            about. My whole process seemed to consist of searching through
+            pre-built technologies for something that fit my use case and
+            inserting it into our codebase. Nothing seemed especially
+            satisfying, and it was hard to feel any sense of ownership over my
+            own contributions. Due to this, I feel that this project taught me a
+            lot about what I like and don&apos;t like in development, and for
+            that reason, I would say it was a great success for a first project.
         </p>
     );
 
