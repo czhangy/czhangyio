@@ -8,12 +8,11 @@
     width: 100%;
 
     .window {
-        --img-size: 300px;
         align-items: center;
         display: flex;
-        height: var(--img-size);
+        height: 200px;
         position: relative;
-        width: var(--img-size);
+        width: 300px;
 
         button {
             --button-size: 20px;
@@ -74,7 +73,8 @@
 
 @media screen and (min-width: constants.$tablet) {
     .project-carousel .window {
-        --img-size: 450px;
+        height: 350px;
+        width: 500px;
 
         button {
             --button-size: 30px;
@@ -84,11 +84,8 @@
 }
 
 @media screen and (min-width: constants.$desktop) {
-    .project-carousel {
-        margin-top: 4rem;
-
-        .window {
-            --img-size: 600px;
-        }
+    .project-carousel .window {
+        height: 400px;
+        width: 600px;
     }
 }
