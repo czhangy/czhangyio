@@ -35,23 +35,23 @@ const BruinByte: NextPage<Props> = ({ bruinbyte }: Props) => {
             Auth0 and profiles for users to customize using a profile page,
             private to each user. In addition to written reviews, users would
             also be prompted to provide a star rating, providing a quick
-            overview of a restaurant's rating.
+            overview of a restaurant&apos;s rating.
         </p>
     );
 
     const development = (
         <p>
-            This project's development started off with research into the tools
-            we would be using. This meant looking into React.js, Firebase, and
-            Node.js, specifically. From there, we split our team into 2 groups:
-            frontend and backend. As part of the frontend team, I worked on
-            building components using MaterialUI, including the landing page,
+            This project&apos;s development started off with research into the
+            tools we would be using. This meant looking into React.js, Firebase,
+            and Node.js, specifically. From there, we split our team into 2
+            groups: frontend and backend. As part of the frontend team, I worked
+            on building components using MaterialUI, including the landing page,
             restaurant cards, restaurant modals, and the profile page. Due to
             the nature of the project, the primary focus during this development
             was completion, so a lot of best practices were ignored. After the
             UI was built, I pivoted to integrating Auth0 with our application
             and making all the necessary changes to add auth into the
-            application's flow. Finally, I finished things up by gathering
+            application&apos;s flow. Finally, I finished things up by gathering
             static data for each restaurant and assisting the backend team in
             their integration with the frontend.
         </p>
@@ -59,22 +59,22 @@ const BruinByte: NextPage<Props> = ({ bruinbyte }: Props) => {
 
     const reflection = (
         <p>
-            This project was my team's first introduction into web development,
-            and, as to be expected, things were pretty rocky. Varying levels of
-            interest in the subject matter made a lot of the work distribution
-            unbalanced, resulting in a significant hit to team morale. In
-            addition, a lack of experience with the tools we were using led to a
-            lot of wasted energy, such as researching Node.js when the main draw
-            of Firebase is its serverless nature, or the use of Auth0 despite
-            Firebase having user authentication out of the box. The application
-            itself is also hacked together, with 0 consideration for
-            responsiveness, many unsolved bugs, and a massive amount of bloat in
-            the form of uneccessary files. Despite all of these obstacles, this
-            project was a great introduction into the world of full-stack
-            development, and catapulted my technical abilities to a level where
-            I could make more complex apps. In turn, this enabled me to expand
-            my horizons in terms of how I approached trying to help my local
-            communities.
+            This project was my team&apos;s first introduction into web
+            development, and, as to be expected, things were pretty rocky.
+            Varying levels of interest in the subject matter made a lot of the
+            work distribution unbalanced, resulting in a significant hit to team
+            morale. In addition, a lack of experience with the tools we were
+            using led to a lot of wasted energy, such as researching Node.js
+            when the main draw of Firebase is its serverless nature, or the use
+            of Auth0 despite Firebase having user authentication out of the box.
+            The application itself is also hacked together, with 0 consideration
+            for responsiveness, many unsolved bugs, and a massive amount of
+            bloat in the form of uneccessary files. Despite all of these
+            obstacles, this project was a great introduction into the world of
+            full-stack development, and catapulted my technical abilities to a
+            level where I could make more complex apps. In turn, this enabled me
+            to expand my horizons in terms of how I approached trying to help my
+            local communities.
         </p>
     );
 
