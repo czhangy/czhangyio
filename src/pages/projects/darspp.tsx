@@ -128,7 +128,7 @@ const DarsPP: NextPage<Props> = ({ darspp }: Props) => {
     ];
 
     return (
-        <div id="splekbot">
+        <div id="darspp">
             <Head>
                 <title>DARS++ | Charles Zhang</title>
             </Head>

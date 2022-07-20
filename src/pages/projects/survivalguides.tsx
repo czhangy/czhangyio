@@ -92,7 +92,7 @@ const SurvivalGuides: NextPage<Props> = ({ survivalGuides }: Props) => {
     ];
 
     return (
-        <div id="splekbot">
+        <div id="survival-guides">
             <Head>
                 <title>Survival Guides | Charles Zhang</title>
             </Head>
