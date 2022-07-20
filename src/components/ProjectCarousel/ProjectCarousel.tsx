@@ -63,7 +63,7 @@ const ProjectCarousel: React.FC<Props> = ({ imageURLs }: Props) => {
                                 src={url}
                                 alt=""
                                 layout="fill"
-                                objectFit="contain"
+                                objectFit="cover"
                             />
                         </div>
                     );

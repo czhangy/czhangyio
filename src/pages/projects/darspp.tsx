@@ -124,7 +124,6 @@ const DarsPP: NextPage<Props> = ({ darspp }: Props) => {
         "/assets/projects/darspp/start.webp",
         "/assets/projects/darspp/selection.webp",
         "/assets/projects/darspp/results.webp",
-        "/assets/projects/darspp/hash.webp",
     ];
 
     return (

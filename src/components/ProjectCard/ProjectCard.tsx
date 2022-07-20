@@ -24,6 +24,7 @@ const ProjectCard: React.FC<Props> = ({ project }: Props) => {
                         alt={`${project.name} thumbnail`}
                         layout="fill"
                         objectFit="cover"
+                        objectPosition="top"
                     ></Image>
                 </a>
             </Link>
