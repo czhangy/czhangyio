@@ -18,9 +18,9 @@ const Squirdle: NextPage<Props> = ({ squirdle }: Props) => {
             Squirdle is a Pokémon-themed take on the popular game Wordle. It was
             developed with very similar styling to Wordle to keep things simple
             and recognizable, but with the twist that, instead of guessing a
-            word, the player needs to "catch" a target Pokémon from Gen I to Gen
-            IV by guessing it. The application focuses on clean design and
-            optimized performance.
+            word, the player needs to &quot;catch&quot; a target Pokémon from
+            Gen I to Gen IV by guessing it. The application focuses on clean
+            design and optimized performance.
         </p>
     );
 
@@ -107,16 +107,16 @@ const Squirdle: NextPage<Props> = ({ squirdle }: Props) => {
             </p>
             <p>
                 The next components I decided to work on were the modals. The
-                "How to Play" modal was fairly simple, I just created a page for
-                each attribute, explaining how "closeness" to the target
-                attribute was determined. I also decided to add credits for
-                myself and the resources I used at the end of this modal. Next,
-                I introduced a "Current Pokémon" modal that showed the user
-                either the target Pokémon if the game had ended, or a patch of
-                grass representing an unknown target if the game was still
-                going. Finally, I made a settings modal for the future
-                implementation of settings and as a navigation hub to other
-                pages of the application.
+                &quot;How to Play&quot; modal was fairly simple, I just created
+                a page for each attribute, explaining how &quot;closeness&quot;
+                to the target attribute was determined. I also decided to add
+                credits for myself and the resources I used at the end of this
+                modal. Next, I introduced a &quot;Current Pokémon&quot; modal
+                that showed the user either the target Pokémon if the game had
+                ended, or a patch of grass representing an unknown target if the
+                game was still going. Finally, I made a settings modal for the
+                future implementation of settings and as a navigation hub to
+                other pages of the application.
             </p>
             <p>
                 I then switched to working on the profile page, which I hoped
