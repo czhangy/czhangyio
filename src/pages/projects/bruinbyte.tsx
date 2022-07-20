@@ -87,7 +87,7 @@ const BruinByte: NextPage<Props> = ({ bruinbyte }: Props) => {
     ];
 
     return (
-        <div id="splekbot">
+        <div id="bruinbyte">
             <Head>
                 <title>BruinByte | Charles Zhang</title>
             </Head>
