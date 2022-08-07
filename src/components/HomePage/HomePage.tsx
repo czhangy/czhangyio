@@ -49,9 +49,9 @@ const HomePage: React.FC = () => {
                     <Link href="/projects">
                         <a>Projects</a>
                     </Link>
-                    <Link href="/skills">
+                    {/* <Link href="/skills">
                         <a>Skills</a>
-                    </Link>
+                    </Link> */}
                 </div>
             </nav>
         </PageWrapper>

@@ -23,9 +23,9 @@ describe("<NavMenu />", () => {
             "href",
             "/projects"
         );
-        expect(screen.queryByText("Skills").closest("a")).toHaveAttribute(
-            "href",
-            "/skills"
-        );
+        // expect(screen.queryByText("Skills").closest("a")).toHaveAttribute(
+        //     "href",
+        //     "/skills"
+        // );
     });
 });

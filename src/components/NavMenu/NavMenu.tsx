@@ -60,7 +60,7 @@ const NavMenu: React.FC<Props> = ({ open }: Props) => {
                     </a>
                 </Link>
             </li>
-            <li>
+            {/* <li>
                 <Link href="/skills">
                     <a>
                         <div className={styles["link-icon"]}>
@@ -74,7 +74,7 @@ const NavMenu: React.FC<Props> = ({ open }: Props) => {
                         <p>Skills</p>
                     </a>
                 </Link>
-            </li>
+            </li> */}
         </ul>
     );
 };
